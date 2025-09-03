@@ -24,25 +24,28 @@ import {
   Package,
   Utensils,
   Store,
+  Handshake,
+  Building,
+  Globe,
 } from "lucide-react";
 
 // === 1. Define Interfaces for Type Safety ===
 
 // Interface for translation content for a single language
 interface TranslationContent {
-  contactUs: string;
+  clientsPartners: string;
   heroTitle: string;
   heroTitleHighlight: string;
   heroDescription: string;
-  freeConsultation: string;
+  partnershipOpportunity: string;
   whatsapp: string;
   whatsappDescription: string;
-  quickResponse: string;
-  quickResponseDesc: string;
-  productInfo: string;
-  productInfoDesc: string;
-  orderAssistance: string;
-  orderAssistanceDesc: string;
+  businessGrowth: string;
+  businessGrowthDesc: string;
+  marketExpansion: string;
+  marketExpansionDesc: string;
+  communitySupport: string;
+  communitySupportDesc: string;
   contactWhatsApp: string;
   promoText: string;
   contactInfo: string;
@@ -62,15 +65,19 @@ interface TranslationContent {
   sundayTime: string;
   followUs: string;
   followers: string;
-  sendMessage: string;
+  partnershipForm: string;
   formDescription: string;
   messageSent: string;
   thankYou: string;
-  fullName: string;
-  fullNamePlaceholder: string;
+  companyName: string;
+  companyNamePlaceholder: string;
+  contactPerson: string;
+  contactPersonPlaceholder: string;
   emailPlaceholder: string;
-  subject: string;
-  subjectPlaceholder: string;
+  businessType: string;
+  businessTypePlaceholder: string;
+  partnershipType: string;
+  partnershipTypePlaceholder: string;
   message: string;
   messagePlaceholder: string;
   sending: string;
@@ -83,6 +90,7 @@ interface TranslationContent {
 interface Translations {
   pl: TranslationContent;
   en: TranslationContent;
+  id: TranslationContent;
 }
 
 // Interface for Contact Info Card data
@@ -111,97 +119,39 @@ interface SocialLink {
   followers: string;
 }
 
-// Translations object - UPDATED FOR ASIAN GROCERY
+// Translations object - UPDATED FOR CLIENTS & PARTNERS
 const translations: Translations = {
-  pl: {
-    contactUs: "Skontaktuj się z nami",
-    heroTitle: "Odkryj Smaki Azji w Sercu",
-    heroTitleHighlight: " Polski",
-    heroDescription:
-      "Nasz zespół jest gotowy pomóc Ci znaleźć autentyczne produkty azjatyckie. Uzyskaj bezpłatną konsultację dotyczącą naszego asortymentu, świeżych produktów i wszystkich informacji, których potrzebujesz dla swojej kuchni azjatyckiej.",
-    freeConsultation: "Bezpłatna konsultacja przez",
-    whatsapp: " WhatsApp",
-    whatsappDescription:
-      "Uzyskaj pełne informacje o naszym asortymencie produktów azjatyckich, świeżych warzywach, przyprawach, oraz cenach. Nasz zespół jest dostępny 24/7 z szybką odpowiedzią i dokładnymi informacjami.",
-    quickResponse: "Szybka Odpowiedź",
-    quickResponseDesc:
-      "Nasz zespół obsługi klienta zawsze jest gotowy pomóc z jasnymi informacjami.",
-    productInfo: "Informacje o Produktach",
-    productInfoDesc:
-      "Szczegółowe konsultacje dotyczące dostępności, świeżości i pochodzenia produktów azjatyckich.",
-    orderAssistance: "Pomoc w Zamawianiu",
-    orderAssistanceDesc:
-      "Kompletny przewodnik po procesie zamawiania i dostawie produktów.",
-    contactWhatsApp: "Skontaktuj się z nami przez WhatsApp",
-    promoText:
-      "✨ Bezpłatna konsultacja • 🥢 Info o produktach azjatyckich • 🚚 Przewodnik zamawiania",
-    contactInfo: "Informacje Kontaktowe",
-    phone: "Telefon",
-    phoneDesc: "Sklep (Poniedziałek-Sobota)",
-    email: "Email",
-    emailDesc: "Odpowiedź w ciągu 2-4 godzin roboczych",
-    address: "Adres",
-    addressContent: "Mława, Województwo mazowieckie",
-    addressDesc: "Polska",
-    operatingHours: "Godziny Otwarcia",
-    monday: "Poniedziałek - Piątek",
-    mondayTime: "08:00 - 20:00",
-    saturday: "Sobota",
-    saturdayTime: "08:00 - 18:00",
-    sunday: "Niedziela",
-    sundayTime: "10:00 - 16:00",
-    followUs: "Śledź Nas",
-    followers: "obserwujących",
-    sendMessage: "Wyślij Wiadomość",
-    formDescription:
-      "Lub wyślij wiadomość przez formularz poniżej. Odpowiemy w ciągu 2-4 godzin roboczych.",
-    messageSent: "Wiadomość Wysłana!",
-    thankYou: "Dziękujemy, skontaktujemy się z Tobą wkrótce.",
-    fullName: "Imię i Nazwisko",
-    fullNamePlaceholder: "Twoje Imię",
-    emailPlaceholder: "email@example.com",
-    subject: "Temat",
-    subjectPlaceholder: "Zapytanie o produkty azjatyckie",
-    message: "Wiadomość",
-    messagePlaceholder:
-      "Zapytaj o cokolwiek dotyczące naszych produktów azjatyckich, dostępności, dostaw lub innych informacji o Asian Grocery...",
-    sending: "Wysyłanie...",
-    sendBtn: "Wyślij Wiadomość",
-    required: "*",
-    whatsappMessage:
-      "Dzień dobry! Jestem zainteresowany/a produktami Asian Grocery i chciałbym/chciałabym uzyskać więcej informacji o dostępnym asortymencie.",
-  },
   en: {
-    contactUs: "Contact Us",
-    heroTitle: "Discover Asian Flavors in the Heart of",
-    heroTitleHighlight: " Poland",
+    clientsPartners: "Clients & Partners",
+    heroTitle: "Join Our Network of",
+    heroTitleHighlight: " Success Partners",
     heroDescription:
-      "Our team is ready to help you find authentic Asian products. Get a free consultation regarding our assortment, fresh products, and all the information you need for your Asian kitchen.",
-    freeConsultation: "Free Consultation via",
+      "Partner with Asian Grocery to expand your business reach. We work with restaurants, retailers, community organizations, and distributors across Poland to bring authentic Asian flavors to every corner of the country.",
+    partnershipOpportunity: "Partnership Opportunities via",
     whatsapp: " WhatsApp",
     whatsappDescription:
-      "Get complete information about our Asian product assortment, fresh vegetables, spices, and prices. Our team is available 24/7 with quick response and accurate information.",
-    quickResponse: "Quick Response",
-    quickResponseDesc:
-      "Our customer service team is always ready to help with clear information.",
-    productInfo: "Product Information",
-    productInfoDesc:
-      "Detailed consultations regarding availability, freshness, and origin of Asian products.",
-    orderAssistance: "Order Assistance",
-    orderAssistanceDesc:
-      "Complete guide to the ordering process and product delivery.",
-    contactWhatsApp: "Contact Us via WhatsApp",
+      "Discover partnership opportunities with Asian Grocery. From wholesale distribution to community collaborations, we offer various partnership models to grow together in the Asian food market.",
+    businessGrowth: "Business Growth",
+    businessGrowthDesc:
+      "Scale your business with our extensive Asian product portfolio and market expertise.",
+    marketExpansion: "Market Expansion",
+    marketExpansionDesc:
+      "Access new markets and customer segments through our established distribution network.",
+    communitySupport: "Community Support",
+    communitySupportDesc:
+      "Build stronger community connections through authentic Asian food culture programs.",
+    contactWhatsApp: "Discuss Partnership via WhatsApp",
     promoText:
-      "✨ Free consultation • 🥢 Asian product info • 🚚 Ordering guide",
-    contactInfo: "Contact Information",
+      "✨ Partnership consultation • 🤝 Business opportunities • 📈 Market expansion",
+    contactInfo: "Partnership Information",
     phone: "Phone",
-    phoneDesc: "Store (Monday-Saturday)",
+    phoneDesc: "Business Development (Monday-Saturday)",
     email: "Email",
-    emailDesc: "Response within 2-4 working hours",
+    emailDesc: "Partnership inquiries within 24 hours",
     address: "Address",
     addressContent: "Mława, Masovian Voivodeship",
     addressDesc: "Poland",
-    operatingHours: "Operating Hours",
+    operatingHours: "Business Hours",
     monday: "Monday - Friday",
     mondayTime: "08:00 AM - 08:00 PM",
     saturday: "Saturday",
@@ -210,32 +160,162 @@ const translations: Translations = {
     sundayTime: "10:00 AM - 04:00 PM",
     followUs: "Follow Us",
     followers: "followers",
-    sendMessage: "Send Message",
+    partnershipForm: "Partnership Inquiry Form",
     formDescription:
-      "Or send a message through the form below. We will respond within 2-4 working hours.",
-    messageSent: "Message Sent!",
-    thankYou: "Thank you, we will contact you soon.",
-    fullName: "Full Name",
-    fullNamePlaceholder: "Your Name",
-    emailPlaceholder: "email@example.com",
-    subject: "Subject",
-    subjectPlaceholder: "Asian Products Inquiry",
+      "Fill out the form below to explore partnership opportunities. We'll connect you with our business development team within 24 hours.",
+    messageSent: "Partnership Inquiry Sent!",
+    thankYou: "Thank you for your interest. We'll contact you soon to discuss opportunities.",
+    companyName: "Company/Organization Name",
+    companyNamePlaceholder: "Your Company Name",
+    contactPerson: "Contact Person",
+    contactPersonPlaceholder: "Your Full Name",
+    emailPlaceholder: "business@company.com",
+    businessType: "Business Type",
+    businessTypePlaceholder: "Restaurant, Retailer, Distributor, etc.",
+    partnershipType: "Partnership Interest",
+    partnershipTypePlaceholder: "Wholesale, Distribution, Community Partnership, etc.",
     message: "Message",
     messagePlaceholder:
-      "Ask us anything about our Asian products, availability, delivery, or other information about Asian Grocery...",
+      "Tell us about your business, partnership goals, target markets, and how you'd like to collaborate with Asian Grocery...",
     sending: "Sending...",
-    sendBtn: "Send Message",
+    sendBtn: "Submit Partnership Inquiry",
     required: "*",
     whatsappMessage:
-      "Hello! I am interested in Asian Grocery products and would like to get more information about the available assortment.",
+      "Hello! I'm interested in exploring partnership opportunities with Asian Grocery. I'd like to discuss potential collaboration for our business.",
+  },
+  pl: {
+    clientsPartners: "Klienci i Partnerzy",
+    heroTitle: "Dołącz do Naszej Sieci",
+    heroTitleHighlight: " Partnerów Sukcesu",
+    heroDescription:
+      "Nawiąż partnerstwo z Asian Grocery, aby rozszerzyć zasięg swojej działalności. Współpracujemy z restauracjami, detalistami, organizacjami społecznymi i dystrybutorami w całej Polsce, aby dostarczyć autentyczne azjatyckie smaki do każdego zakątka kraju.",
+    partnershipOpportunity: "Możliwości Partnerstwa przez",
+    whatsapp: " WhatsApp",
+    whatsappDescription:
+      "Odkryj możliwości partnerstwa z Asian Grocery. Od dystrybucji hurtowej po współpracę społeczną, oferujemy różne modele partnerstwa, aby razem rozwijać się na rynku żywności azjatyckiej.",
+    businessGrowth: "Rozwój Biznesu",
+    businessGrowthDesc:
+      "Skaluj swój biznes dzięki naszemu szerokiemu portfolio produktów azjatyckich i wiedzy rynkowej.",
+    marketExpansion: "Ekspansja Rynkowa",
+    marketExpansionDesc:
+      "Uzyskaj dostęp do nowych rynków i segmentów klientów przez naszą ustaloną sieć dystrybucyjną.",
+    communitySupport: "Wsparcie Społeczności",
+    communitySupportDesc:
+      "Buduj silniejsze połączenia społeczne przez autentyczne programy kultury żywności azjatyckiej.",
+    contactWhatsApp: "Omów Partnerstwo przez WhatsApp",
+    promoText:
+      "✨ Konsultacja partnerska • 🤝 Możliwości biznesowe • 📈 Ekspansja rynkowa",
+    contactInfo: "Informacje o Partnerstwie",
+    phone: "Telefon",
+    phoneDesc: "Rozwój Biznesu (Poniedziałek-Sobota)",
+    email: "Email",
+    emailDesc: "Zapytania partnerskie w ciągu 24 godzin",
+    address: "Adres",
+    addressContent: "Mława, Województwo mazowieckie",
+    addressDesc: "Polska",
+    operatingHours: "Godziny Biznesowe",
+    monday: "Poniedziałek - Piątek",
+    mondayTime: "08:00 - 20:00",
+    saturday: "Sobota",
+    saturdayTime: "08:00 - 18:00",
+    sunday: "Niedziela",
+    sundayTime: "10:00 - 16:00",
+    followUs: "Śledź Nas",
+    followers: "obserwujących",
+    partnershipForm: "Formularz Zapytania o Partnerstwo",
+    formDescription:
+      "Wypełnij formularz poniżej, aby poznać możliwości partnerstwa. Połączymy Cię z naszym zespołem rozwoju biznesu w ciągu 24 godzin.",
+    messageSent: "Zapytanie o Partnerstwo Wysłane!",
+    thankYou: "Dziękujemy za zainteresowanie. Skontaktujemy się wkrótce, aby omówić możliwości.",
+    companyName: "Nazwa Firmy/Organizacji",
+    companyNamePlaceholder: "Nazwa Twojej Firmy",
+    contactPerson: "Osoba Kontaktowa",
+    contactPersonPlaceholder: "Twoje Imię i Nazwisko",
+    emailPlaceholder: "firma@przykład.pl",
+    businessType: "Rodzaj Działalności",
+    businessTypePlaceholder: "Restauracja, Sklep, Dystrybutor, itp.",
+    partnershipType: "Zainteresowanie Partnerstwem",
+    partnershipTypePlaceholder: "Hurt, Dystrybucja, Partnerstwo Społeczne, itp.",
+    message: "Wiadomość",
+    messagePlaceholder:
+      "Opowiedz nam o swojej firmie, celach partnerstwa, rynkach docelowych i o tym, jak chciałbyś współpracować z Asian Grocery...",
+    sending: "Wysyłanie...",
+    sendBtn: "Wyślij Zapytanie o Partnerstwo",
+    required: "*",
+    whatsappMessage:
+      "Dzień dobry! Jestem zainteresowany/a poznaniem możliwości partnerstwa z Asian Grocery. Chciałbym/chciałabym omówić potencjalną współpracę dla naszej firmy.",
+  },
+  id: {
+    clientsPartners: "Klien & Mitra",
+    heroTitle: "Bergabunglah dengan Jaringan",
+    heroTitleHighlight: " Mitra Sukses Kami",
+    heroDescription:
+      "Bermitra dengan Asian Grocery untuk memperluas jangkauan bisnis Anda. Kami bekerja sama dengan restoran, retailer, organisasi komunitas, dan distributor di seluruh Polandia untuk menghadirkan cita rasa Asia yang autentik ke setiap sudut negara.",
+    partnershipOpportunity: "Peluang Kemitraan melalui",
+    whatsapp: " WhatsApp",
+    whatsappDescription:
+      "Temukan peluang kemitraan dengan Asian Grocery. Dari distribusi grosir hingga kolaborasi komunitas, kami menawarkan berbagai model kemitraan untuk berkembang bersama di pasar makanan Asia.",
+    businessGrowth: "Pertumbuhan Bisnis",
+    businessGrowthDesc:
+      "Kembangkan bisnis Anda dengan portofolio produk Asia yang luas dan keahlian pasar kami.",
+    marketExpansion: "Ekspansi Pasar",
+    marketExpansionDesc:
+      "Akses pasar baru dan segmen pelanggan melalui jaringan distribusi kami yang mapan.",
+    communitySupport: "Dukungan Komunitas",
+    communitySupportDesc:
+      "Bangun koneksi komunitas yang lebih kuat melalui program budaya makanan Asia yang autentik.",
+    contactWhatsApp: "Diskusikan Kemitraan via WhatsApp",
+    promoText:
+      "✨ Konsultasi kemitraan • 🤝 Peluang bisnis • 📈 Ekspansi pasar",
+    contactInfo: "Informasi Kemitraan",
+    phone: "Telepon",
+    phoneDesc: "Pengembangan Bisnis (Senin-Sabtu)",
+    email: "Email",
+    emailDesc: "Pertanyaan kemitraan dalam 24 jam",
+    address: "Alamat",
+    addressContent: "Mława, Masovian Voivodeship",
+    addressDesc: "Polandia",
+    operatingHours: "Jam Bisnis",
+    monday: "Senin - Jumat",
+    mondayTime: "08:00 - 20:00",
+    saturday: "Sabtu",
+    saturdayTime: "08:00 - 18:00",
+    sunday: "Minggu",
+    sundayTime: "10:00 - 16:00",
+    followUs: "Ikuti Kami",
+    followers: "pengikut",
+    partnershipForm: "Formulir Pertanyaan Kemitraan",
+    formDescription:
+      "Isi formulir di bawah ini untuk menjelajahi peluang kemitraan. Kami akan menghubungkan Anda dengan tim pengembangan bisnis kami dalam 24 jam.",
+    messageSent: "Pertanyaan Kemitraan Terkirim!",
+    thankYou: "Terima kasih atas minat Anda. Kami akan segera menghubungi untuk membahas peluang.",
+    companyName: "Nama Perusahaan/Organisasi",
+    companyNamePlaceholder: "Nama Perusahaan Anda",
+    contactPerson: "Orang yang Dapat Dihubungi",
+    contactPersonPlaceholder: "Nama Lengkap Anda",
+    emailPlaceholder: "bisnis@perusahaan.com",
+    businessType: "Jenis Bisnis",
+    businessTypePlaceholder: "Restoran, Retailer, Distributor, dll.",
+    partnershipType: "Minat Kemitraan",
+    partnershipTypePlaceholder: "Grosir, Distribusi, Kemitraan Komunitas, dll.",
+    message: "Pesan",
+    messagePlaceholder:
+      "Ceritakan tentang bisnis Anda, tujuan kemitraan, target pasar, dan bagaimana Anda ingin berkolaborasi dengan Asian Grocery...",
+    sending: "Mengirim...",
+    sendBtn: "Kirim Pertanyaan Kemitraan",
+    required: "*",
+    whatsappMessage:
+      "Halo! Saya tertarik untuk mengeksplorasi peluang kemitraan dengan Asian Grocery. Saya ingin mendiskusikan potensi kolaborasi untuk bisnis kami.",
   },
 };
 
-export default function AsianGroceryContactPage() {
+export default function ClientsPartnersPage() {
   const [formData, setFormData] = useState({
-    name: "",
+    companyName: "",
+    contactPerson: "",
     email: "",
-    subject: "",
+    businessType: "",
+    partnershipType: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -243,19 +323,19 @@ export default function AsianGroceryContactPage() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   // Inline useLanguage hook
-  const useLanguage = (initialLanguage: "pl" | "en" = "pl") => {
-    const [language, setLanguage] = useState<"pl" | "en">(initialLanguage);
+  const useLanguage = (initialLanguage: "en" | "id" | "pl" = "en") => {
+    const [language, setLanguage] = useState<"en" | "id" | "pl">(initialLanguage);
 
     useEffect(() => {
       const savedLanguage = localStorage.getItem("preferred-language");
-      if (savedLanguage === "pl" || savedLanguage === "en") {
+      if (savedLanguage === "en" || savedLanguage === "id" || savedLanguage === "pl") {
         setLanguage(savedLanguage);
       }
     }, []);
 
     useEffect(() => {
-      const handleLanguageChange = (event: CustomEvent<"pl" | "en">) => {
-        if (event.detail === "pl" || event.detail === "en") {
+      const handleLanguageChange = (event: CustomEvent<"en" | "id" | "pl">) => {
+        if (event.detail === "en" || event.detail === "id" || event.detail === "pl") {
           setLanguage(event.detail);
         }
       };
@@ -263,7 +343,7 @@ export default function AsianGroceryContactPage() {
       const handleStorageChange = (event: StorageEvent) => {
         if (
           event.key === "preferred-language" &&
-          (event.newValue === "pl" || event.newValue === "en")
+          (event.newValue === "en" || event.newValue === "id" || event.newValue === "pl")
         ) {
           setLanguage(event.newValue);
         }
@@ -287,11 +367,11 @@ export default function AsianGroceryContactPage() {
     return { language };
   };
 
-  const { language: currentLanguage } = useLanguage("pl");
+  const { language: currentLanguage } = useLanguage("en");
   const t = translations[currentLanguage];
 
   useEffect(() => {
-    const element = document.querySelector("#contact-hero");
+    const element = document.querySelector("#partnership-hero");
     if (!element) return;
 
     const observer = new IntersectionObserver(
@@ -325,28 +405,53 @@ export default function AsianGroceryContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    // Simulate form submission delay
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    // Format form data for WhatsApp message
+    const formattedMessage = `
+🤝 *Asian Grocery - Partnership Inquiry*
+
+🏢 *Company:* ${formData.companyName}
+👤 *Contact Person:* ${formData.contactPerson}
+📧 *Email:* ${formData.email}
+🏪 *Business Type:* ${formData.businessType}
+🤝 *Partnership Interest:* ${formData.partnershipType}
+
+💬 *Details:*
+${formData.message}
+
+---
+Partnership inquiry submitted via Asian Grocery website
+    `.trim();
+
+    // Create WhatsApp URL with form data
+    const whatsappNumber = "48123456789";
+    const whatsappFormUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(formattedMessage)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappFormUrl, '_blank');
 
     setIsSubmitting(false);
     setIsSubmitted(true);
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData({ 
+      companyName: "", 
+      contactPerson: "", 
+      email: "", 
+      businessType: "", 
+      partnershipType: "", 
+      message: "" 
+    });
 
     // Reset success message after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
-  const whatsappNumber = "48123456789"; // Asian Grocery WhatsApp number
+  const whatsappNumber = "48123456789";
   const whatsappMessage = t.whatsappMessage;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     whatsappMessage
   )}`;
-
-  const operationalHours: OperationalHour[] = [
-    { day: t.monday, time: t.mondayTime, isOpen: true },
-    { day: t.saturday, time: t.saturdayTime, isOpen: true },
-    { day: t.sunday, time: t.sundayTime, isOpen: true },
-  ];
 
   const contactInfo: ContactInfoItem[] = [
     {
@@ -358,7 +463,7 @@ export default function AsianGroceryContactPage() {
     {
       icon: <Mail className="text-red-600" size={24} />,
       title: t.email,
-      content: "info@asiangrocery.pl",
+      content: "partnerships@asiangrocery.pl",
       description: t.emailDesc,
     },
     {
@@ -366,27 +471,6 @@ export default function AsianGroceryContactPage() {
       title: t.address,
       content: t.addressContent,
       description: t.addressDesc,
-    },
-  ];
-
-  const socialLinks: SocialLink[] = [
-    {
-      icon: <Instagram className="text-white" size={20} />,
-      name: "Instagram",
-      handle: "@asiangrocerypoland",
-      url: "https://instagram.com/asiangrocerypoland",
-      color: "from-red-600 to-red-500",
-      hoverShadow: "hover:shadow-red-500/30",
-      followers: "12.5K",
-    },
-    {
-      icon: <Facebook className="text-white" size={20} />,
-      name: "Facebook",
-      handle: "Asian Grocery Poland",
-      url: "https://facebook.com/asiangrocerypoland",
-      color: "from-gray-800 to-gray-900",
-      hoverShadow: "hover:shadow-gray-400/50",
-      followers: "8.2K",
     },
   ];
 
@@ -401,17 +485,17 @@ export default function AsianGroceryContactPage() {
       >
         <div className="absolute top-20 left-10 animate-float-slow">
           <div className="w-24 h-24 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
-            <ShoppingCart className="text-red-600 animate-pulse" size={28} />
+            <Handshake className="text-red-600 animate-pulse" size={28} />
           </div>
         </div>
         <div className="absolute top-40 right-16 animate-float-delayed">
           <div className="w-20 h-20 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
-            <Coffee className="text-red-600 animate-spin-slow" size={24} />
+            <Building className="text-red-600 animate-spin-slow" size={24} />
           </div>
         </div>
         <div className="absolute bottom-40 left-20 animate-bounce-gentle">
           <div className="w-16 h-16 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
-            <Package className="text-red-600 animate-twinkle" size={20} />
+            <Globe className="text-red-600 animate-twinkle" size={20} />
           </div>
         </div>
         <div className="absolute top-60 right-40 animate-pulse-gentle">
@@ -419,13 +503,13 @@ export default function AsianGroceryContactPage() {
         </div>
         <div className="absolute bottom-20 right-20 animate-float-up-down">
           <div className="w-18 h-18 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
-            <Utensils className="text-red-600 animate-sway" size={22} />
+            <Users className="text-red-600 animate-sway" size={22} />
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section id="contact-hero" className="relative py-20 overflow-hidden">
+      <section id="partnership-hero" className="relative py-20 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-600/30 to-transparent rounded-full blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-red-500/20 to-transparent rounded-full blur-2xl animate-pulse-slower"></div>
@@ -453,8 +537,8 @@ export default function AsianGroceryContactPage() {
                   : "translate-y-10 opacity-0"
               )}
             >
-              <MessageCircle size={16} className="animate-bounce" />
-              {t.contactUs}
+              <Handshake size={16} className="animate-bounce" />
+              {t.clientsPartners}
             </div>
 
             <h1
@@ -485,208 +569,85 @@ export default function AsianGroceryContactPage() {
         </div>
       </section>
 
-      {/* WhatsApp CTA Section */}
-      <section className="py-16 bg-red-50 relative overflow-hidden">
-        <div className="container mx-auto px-6 relative z-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-100 transform hover:scale-105 transition-all duration-500 group">
-              <div className="mb-6">
-                <div className="w-24 h-24 bg-gradient-to-r from-red-600 to-red-500 rounded-full mx-auto flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-500 shadow-lg">
-                  <MessageCircle
-                    className="text-white animate-bounce"
-                    size={40}
-                  />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                  {t.freeConsultation}
-                  <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
-                    {t.whatsapp}
-                  </span>
-                </h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  {t.whatsappDescription}
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white/50 rounded-2xl p-4 border border-red-600/30 shadow-sm">
-                  <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mb-3 mx-auto shadow-md">
-                    <Clock className="text-white" size={20} />
-                  </div>
-                  <h3 className="font-bold text-gray-800 mb-2">
-                    {t.quickResponse}
-                  </h3>
-                  <p className="text-sm text-gray-700">
-                    {t.quickResponseDesc}
-                  </p>
-                </div>
-
-                <div className="bg-white/50 rounded-2xl p-4 border border-red-600/30 shadow-sm">
-                  <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mb-3 mx-auto shadow-md">
-                    <Store className="text-white" size={20} />
-                  </div>
-                  <h3 className="font-bold text-gray-800 mb-2">
-                    {t.productInfo}
-                  </h3>
-                  <p className="text-sm text-gray-700">
-                    {t.productInfoDesc}
-                  </p>
-                </div>
-
-                <div className="bg-white/50 rounded-2xl p-4 border border-red-600/30 shadow-sm">
-                  <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-500 rounded-xl flex items-center justify-center mb-3 mx-auto shadow-md">
-                    <Users className="text-white" size={20} />
-                  </div>
-                  <h3 className="font-bold text-gray-800 mb-2">
-                    {t.orderAssistance}
-                  </h3>
-                  <p className="text-sm text-gray-700">
-                    {t.orderAssistanceDesc}
-                  </p>
-                </div>
-              </div>
-
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-red-600 to-red-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-2xl hover:shadow-red-500/40 transform hover:scale-110 transition-all duration-300 group shadow-lg"
-              >
-                <MessageCircle
-                  size={24}
-                  className="group-hover:rotate-12 transition-transform duration-300"
-                />
-                <span>{t.contactWhatsApp}</span>
-                <div className="w-2 h-2 bg-white rounded-full animate-ping"></div>
-              </a>
-
-              <p className="text-sm text-gray-600 mt-4">{t.promoText}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information & Form Section */}
+      {/* Partnership Information & Form Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Contact Information */}
+            {/* Partnership Information */}
             <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                  <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center shadow-md">
-                    <Phone className="text-white" size={16} />
-                  </div>
-                  {t.contactInfo}
-                </h2>
-              </div>
+              <div className="relative">
+                <div className="container mx-auto px-6 relative z-20">
+                  <div className="max-w-4xl mx-auto text-center">
+                    <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-100 transform hover:scale-105 transition-all duration-500 group">
+                      <div className="mb-6">
+                        <div className="w-24 h-24 bg-gradient-to-r from-red-600 to-red-500 rounded-full mx-auto flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-500 shadow-lg">
+                          <MessageCircle
+                            className="text-white animate-bounce"
+                            size={40}
+                          />
+                        </div>
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                          {t.partnershipOpportunity}
+                          <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
+                            {t.whatsapp}
+                          </span>
+                        </h2>
+                        <p className="text-lg text-gray-700 leading-relaxed">
+                          {t.whatsappDescription}
+                        </p>
+                      </div>
 
-              {/* Contact Cards */}
-              <div className="space-y-4">
-                {contactInfo.map((info: ContactInfoItem, index: number) => (
-                  <div
-                    key={index}
-                    className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:shadow-red-500/30 hover:scale-105 transition-all duration-500 group"
-                    style={{ animationDelay: `${index * 200}ms` }}
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 bg-red-50 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-sm border border-red-600/30">
-                        {info.icon}
+                      <div className="grid md:grid-cols-3 gap-6 mb-8">
+                        <div className="bg-white/50 rounded-2xl p-4 border border-red-600/30 shadow-sm">
+                          <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mb-3 mx-auto shadow-md">
+                            <Building className="text-white" size={20} />
+                          </div>
+                          <h3 className="font-bold text-gray-800 mb-2">
+                            {t.businessGrowth}
+                          </h3>
+                        </div>
+
+                        <div className="bg-white/50 rounded-2xl p-4 border border-red-600/30 shadow-sm">
+                          <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mb-3 mx-auto shadow-md">
+                            <Globe className="text-white" size={20} />
+                          </div>
+                          <h3 className="font-bold text-gray-800 mb-2">
+                            {t.marketExpansion}
+                          </h3>
+                        </div>
+
+                        <div className="bg-white/50 rounded-2xl p-4 border border-red-600/30 shadow-sm">
+                          <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-500 rounded-xl flex items-center justify-center mb-3 mx-auto shadow-md">
+                            <Users className="text-white" size={20} />
+                          </div>
+                          <h3 className="font-bold text-gray-800 mb-2">
+                            {t.communitySupport}
+                          </h3>
+                        </div>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="font-bold text-gray-800 mb-1 group-hover:text-red-600 transition-colors duration-300">
-                          {info.title}
-                        </h3>
-                        <p className="text-lg text-gray-800 font-medium mb-1">
-                          {info.content}
-                        </p>
-                        <p className="text-sm text-gray-700">
-                          {info.description}
-                        </p>
-                      </div>
+
+                      <a
+                        href={whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 bg-gradient-to-r from-red-600 to-red-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-2xl hover:shadow-red-500/40 transform hover:scale-110 transition-all duration-300 group shadow-lg"
+                      >
+                        <MessageCircle
+                          size={24}
+                          className="group-hover:rotate-12 transition-transform duration-300"
+                        />
+                        <span>{t.contactWhatsApp}</span>
+                        <div className="w-2 h-2 bg-white rounded-full animate-ping"></div>
+                      </a>
+
+                      <p className="text-sm text-gray-600 mt-4">{t.promoText}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-
-              {/* Operating Hours */}
-              <div className="bg-red-50 rounded-2xl p-6 border border-red-600/30 shadow-md">
-                <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2 text-xl">
-                  <Clock className="text-red-600" size={24} />
-                  {t.operatingHours}
-                </h3>
-                <div className="space-y-3">
-                  {operationalHours.map(
-                    (schedule: OperationalHour, index: number) => (
-                      <div
-                        key={index}
-                        className="flex items-center justify-between"
-                      >
-                        <span className="text-gray-700 font-medium">
-                          {schedule.day}
-                        </span>
-                        <div className="flex items-center gap-2">
-                          <span
-                            className={clsx(
-                              "font-medium",
-                              schedule.isOpen
-                                ? "text-red-600"
-                                : "text-red-500"
-                            )}
-                          >
-                            {schedule.time}
-                          </span>
-                          <div
-                            className={clsx(
-                              "w-2 h-2 rounded-full",
-                              schedule.isOpen
-                                ? "bg-red-600 animate-pulse"
-                                : "bg-red-500"
-                            )}
-                          ></div>
-                        </div>
-                      </div>
-                    )
-                  )}
-                </div>
-              </div>
-
-              {/* Social Media */}
-              <div>
-                <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2 text-xl">
-                  <Instagram className="text-red-600" size={24} />
-                  {t.followUs}
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {socialLinks.map((social: SocialLink, index: number) => (
-                    <a
-                      key={index}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={clsx(
-                        `bg-gradient-to-r ${social.color} rounded-2xl p-4 text-white hover:shadow-lg ${social.hoverShadow} hover:scale-105 transition-all duration-300 group shadow-md`
-                      )}
-                    >
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="p-2 bg-white/20 rounded-lg group-hover:rotate-12 transition-transform duration-300">
-                          {social.icon}
-                        </div>
-                        <div>
-                          <h4 className="font-bold">{social.name}</h4>
-                          <p className="text-sm opacity-90">{social.handle}</p>
-                        </div>
-                      </div>
-                      <div className="text-sm opacity-90">
-                        {social.followers} {t.followers}
-                      </div>
-                    </a>
-                  ))}
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Partnership Form */}
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-100 relative overflow-hidden">
               {/* Form background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-l from-red-500/20 to-transparent rounded-full blur-2xl"></div>
@@ -694,9 +655,9 @@ export default function AsianGroceryContactPage() {
               <div className="relative z-10">
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
                   <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center shadow-md">
-                    <Mail className="text-white" size={16} />
+                    <Handshake className="text-white" size={16} />
                   </div>
-                  {t.sendMessage}
+                  {t.partnershipForm}
                 </h2>
 
                 <p className="text-gray-700 mb-6">{t.formDescription}</p>
@@ -717,47 +678,78 @@ export default function AsianGroceryContactPage() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="group">
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        {t.fullName} {t.required}
+                        {t.companyName} {t.required}
                       </label>
                       <input
                         type="text"
-                        name="name"
-                        value={formData.name}
+                        name="companyName"
+                        value={formData.companyName}
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-300 group-hover:border-red-600 shadow-sm"
-                        placeholder={t.fullNamePlaceholder}
+                        placeholder={t.companyNamePlaceholder}
                       />
                     </div>
 
                     <div className="group">
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        {t.email} {t.required}
+                        {t.contactPerson} {t.required}
                       </label>
                       <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
+                        type="text"
+                        name="contactPerson"
+                        value={formData.contactPerson}
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-300 group-hover:border-red-600 shadow-sm"
-                        placeholder={t.emailPlaceholder}
+                        placeholder={t.contactPersonPlaceholder}
                       />
                     </div>
                   </div>
 
                   <div className="group">
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t.subject}
+                      Email {t.required}
                     </label>
                     <input
-                      type="text"
-                      name="subject"
-                      value={formData.subject}
+                      type="email"
+                      name="email"
+                      value={formData.email}
                       onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-300 group-hover:border-red-600 shadow-sm"
-                      placeholder={t.subjectPlaceholder}
+                      placeholder={t.emailPlaceholder}
                     />
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="group">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        {t.businessType}
+                      </label>
+                      <input
+                        type="text"
+                        name="businessType"
+                        value={formData.businessType}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-300 group-hover:border-red-600 shadow-sm"
+                        placeholder={t.businessTypePlaceholder}
+                      />
+                    </div>
+
+                    <div className="group">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        {t.partnershipType}
+                      </label>
+                      <input
+                        type="text"
+                        name="partnershipType"
+                        value={formData.partnershipType}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-300 group-hover:border-red-600 shadow-sm"
+                        placeholder={t.partnershipTypePlaceholder}
+                      />
+                    </div>
                   </div>
 
                   <div className="group">

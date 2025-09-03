@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NH Ar-Rasyid",
-  description: "Website NH Ar-Rasyid",
+  title: "INDOASIAFOOD",
+  description: "Connecting Asia to Poland. Toko Asia terlengkap di Mława dengan 500+ produk autentik. Dari bumbu dapur Nusantara hingga makanan siap saji khas Indonesia.",
   icons: {
     icon: "/logo.png",
   },

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 // Define a type for your translation structure
@@ -186,15 +187,7 @@ export default function MultilingualTopHeader() {
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           {/* Logo */}
           <div className="flex items-center gap-3 group cursor-pointer">
-            <div className="w-14 h-14 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
-              <svg 
-                className="w-7 h-7 text-white" 
-                fill="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
-              </svg>
-            </div>
+            <Image src="/logo.png" alt="Logo" width={56} height={56} />
             <div className="leading-tight">
               <h1 className="text-lg font-bold text-red-600 group-hover:text-red-700 transition-colors">
                 INDOASIAFOOD

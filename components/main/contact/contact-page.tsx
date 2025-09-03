@@ -287,7 +287,7 @@ export default function AsianGroceryContactPage() {
     return { language };
   };
 
-  const { language: currentLanguage } = useLanguage("pl");
+  const { language: currentLanguage } = useLanguage("en");
   const t = translations[currentLanguage];
 
   useEffect(() => {

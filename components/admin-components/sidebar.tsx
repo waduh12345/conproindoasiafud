@@ -46,7 +46,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, menuItems }) => {
             </div>
             <div className="ml-3">
               <h2 className="text-gray-900 text-lg font-bold font-italic">
-                NH Ar-Rasyid
+                INDOASIAFOOD
               </h2>
             </div>
           </div>
