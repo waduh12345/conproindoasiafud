@@ -225,6 +225,28 @@ export default function AboutUsPage() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Sync language with global preference/storage and header events
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const saved = window.localStorage.getItem('preferred-language');
+      if (saved === 'en' || saved === 'id' || saved === 'pl') {
+        setLanguage(saved as Language);
+      }
+    } catch {
+      // ignore storage errors
+    }
+
+    const onLanguageChanged = (e: Event) => {
+      const detail = (e as CustomEvent).detail as Language | undefined;
+      if (detail === 'en' || detail === 'id' || detail === 'pl') {
+        setLanguage(detail);
+      }
+    };
+    window.addEventListener('languageChanged', onLanguageChanged as EventListener);
+    return () => window.removeEventListener('languageChanged', onLanguageChanged as EventListener);
+  }, []);
+
   const sections = [
     { id: 'company', label: t.company, icon: Building },
     { id: 'vision', label: t.vision, icon: Target },

@@ -9,6 +9,321 @@ import {
   Utensils, Target, Handshake, Gift, Coffee, Crown
 } from 'lucide-react';
 
+// Language support
+type Language = 'id' | 'en' | 'pl';
+
+const translations = {
+  id: {
+    headerTitle1: 'Keunggulan',
+    headerTitle2: 'Kami',
+    headerSubtitle: 'Lima keunggulan utama yang menjadikan Asian Grocery pilihan #1 untuk kebutuhan kuliner Asia di Polandia.',
+    excellenceNote: 'Excellence in Asian Grocery Since 2019',
+    learnMore: 'Pelajari Lebih Detail',
+    ctaTitle: 'Rasakan Keunggulan Kami Sekarang',
+    ctaDesc: 'Bergabunglah dengan ribuan customer yang telah merasakan excellence of Asian Grocery experience',
+    ctaShop: '🛒 Mulai Belanja Sekarang',
+    ctaContact: '📞 Hubungi Kami',
+    advantages: [
+      {
+        title: 'Asian Grocery Terlengkap',
+        subtitle: 'One-Stop Shopping Experience',
+        description: 'Menyediakan lebih dari 2000+ produk Asia authentic dari Indonesia, Thailand, Korea, Jepang, dan Vietnam. Dari bumbu dapur hingga snack favorit, semua tersedia di satu tempat.',
+        features: [
+          '2000+ produk dari 10+ negara Asia',
+          'Weekly restock dengan produk fresh',
+          'Import langsung dari distributor resmi',
+          'Kategori lengkap: bumbu, instant, frozen, snack',
+          'Produk halal bersertifikat',
+          'Exclusive brands tidak tersedia di tempat lain',
+        ],
+        statsNumber: '2000+',
+        statsLabel: 'Asian Products',
+        icon: '🏪',
+        color: 'red',
+        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600',
+      },
+      {
+        title: 'Makanan Indonesia Authentic',
+        subtitle: 'Taste of Home, Rasa Kampung Halaman',
+        description: 'Spesialisasi dalam makanan dan bumbu Indonesia authentic. Dari rendang instant hingga kerupuk tradisional, kami memastikan rasa yang sama persis seperti di Indonesia.',
+        features: [
+          'Bumbu rendang, gudeg, rawon authentic',
+          'Mie instant semua brand terkenal Indonesia',
+          'Kerupuk dan cemilan tradisional',
+          'Sambal dan saus asli Indonesia',
+          'Frozen food ready-to-eat Indonesian',
+          'Import direct dari produsen terpercaya',
+        ],
+        statsNumber: '500+',
+        statsLabel: 'Indonesian Products',
+        icon: '🇮🇩',
+        color: 'red',
+        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600',
+      },
+      {
+        title: 'Harga Bersaing & Kualitas Premium',
+        subtitle: 'Best Value for Money Guarantee',
+        description: 'Komitmen memberikan harga terbaik tanpa mengorbankan kualitas. Sistem supply chain efisien memungkinkan kami menawarkan harga competitive untuk produk premium.',
+        features: [
+          'Price match guarantee dengan kompetitor',
+          'Bulk discount untuk pembelian grosir',
+          'Member loyalty program dengan cashback',
+          'Quality control ketat sebelum display',
+          'Garansi kepuasan atau uang kembali',
+          'Weekly promotion dan special offers',
+        ],
+        statsNumber: '25%',
+        statsLabel: 'Average Savings',
+        icon: '💰',
+        color: 'green',
+        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600',
+      },
+      {
+        title: 'Connected Community Hub',
+        subtitle: 'Pusat Komunitas Asia di Polandia',
+        description: 'Lebih dari sekedar toko, kami adalah meeting point komunitas Asia. Menghubungkan diaspora Asia dengan local food enthusiasts melalui berbagai aktivitas dan event.',
+        features: [
+          'Regular community gathering & potluck',
+          'Cooking workshop dengan chef Indonesia',
+          'Cultural festival collaboration',
+          'Online community dengan 5000+ members',
+          'Event catering untuk komunitas',
+          'Partnership dengan organisasi Asia',
+        ],
+        statsNumber: '5000+',
+        statsLabel: 'Community Members',
+        icon: '🤝',
+        color: 'blue',
+        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600',
+      },
+      {
+        title: 'Misi Budaya & Bisnis',
+        subtitle: 'Cultural Bridge Through Food',
+        description: 'Misi ganda sebagai bisnis profitable sekaligus cultural ambassador. Memperkenalkan kekayaan kuliner Asia kepada masyarakat Polandia sambil mempertahankan authenticity.',
+        features: [
+          'Educational content tentang Asian cuisine',
+          'Recipe sharing dan cooking tips',
+          'Cultural storytelling behind setiap produk',
+          'Kolaborasi dengan chef dan food blogger',
+          'Sponsorship event budaya internasional',
+          'Media coverage untuk promosi Asian food',
+        ],
+        statsNumber: '50+',
+        statsLabel: 'Cultural Events',
+        icon: '🌏',
+        color: 'purple',
+        image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600',
+      },
+    ],
+  },
+  en: {
+    headerTitle1: 'Our',
+    headerTitle2: 'Advantages',
+    headerSubtitle: 'Five key advantages that make Asian Grocery the #1 choice for Asian culinary needs in Poland.',
+    excellenceNote: 'Excellence in Asian Grocery Since 2019',
+    learnMore: 'Learn More',
+    ctaTitle: 'Experience Our Advantages Today',
+    ctaDesc: 'Join thousands of customers who already enjoy the Asian Grocery experience',
+    ctaShop: '🛒 Start Shopping Now',
+    ctaContact: '📞 Contact Us',
+    advantages: [
+      {
+        title: 'Complete Asian Grocery',
+        subtitle: 'One-Stop Shopping Experience',
+        description: 'We offer 2000+ authentic Asian products from Indonesia, Thailand, Korea, Japan, and Vietnam. From pantry spices to favorite snacks—all in one place.',
+        features: [
+          '2000+ products from 10+ Asian countries',
+          'Weekly restock with fresh products',
+          'Direct import from official distributors',
+          'Complete categories: spices, instant, frozen, snacks',
+          'Halal certified products',
+          'Exclusive brands not available elsewhere',
+        ],
+        statsNumber: '2000+',
+        statsLabel: 'Asian Products',
+        icon: '🏪',
+        color: 'red',
+        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600',
+      },
+      {
+        title: 'Authentic Indonesian Food',
+        subtitle: 'Taste of Home',
+        description: 'Specializing in authentic Indonesian food and spices. From instant rendang to traditional crackers, we preserve the same taste as in Indonesia.',
+        features: [
+          'Authentic rendang, gudeg, rawon spices',
+          'Instant noodles from famous Indonesian brands',
+          'Traditional crackers and snacks',
+          'Original Indonesian sambal and sauces',
+          'Ready-to-eat Indonesian frozen foods',
+          'Direct import from trusted producers',
+        ],
+        statsNumber: '500+',
+        statsLabel: 'Indonesian Products',
+        icon: '🇮🇩',
+        color: 'red',
+        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600',
+      },
+      {
+        title: 'Competitive Price & Premium Quality',
+        subtitle: 'Best Value for Money Guarantee',
+        description: 'Committed to the best prices without sacrificing quality. Efficient supply chain allows competitive pricing for premium products.',
+        features: [
+          'Price match guarantee with competitors',
+          'Bulk discounts for wholesale purchases',
+          'Member loyalty program with cashback',
+          'Strict quality control before display',
+          'Satisfaction guarantee or money back',
+          'Weekly promotions and special offers',
+        ],
+        statsNumber: '25%',
+        statsLabel: 'Average Savings',
+        icon: '💰',
+        color: 'green',
+        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600',
+      },
+      {
+        title: 'Connected Community Hub',
+        subtitle: 'Asia Community Center in Poland',
+        description: 'More than a store, we are a meeting point for Asian communities, connecting diaspora with local food enthusiasts through activities and events.',
+        features: [
+          'Regular community gatherings & potlucks',
+          'Cooking workshops with Indonesian chefs',
+          'Cultural festival collaborations',
+          'Online community with 5000+ members',
+          'Event catering for communities',
+          'Partnerships with Asian organizations',
+        ],
+        statsNumber: '5000+',
+        statsLabel: 'Community Members',
+        icon: '🤝',
+        color: 'blue',
+        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600',
+      },
+      {
+        title: 'Cultural and Business Mission',
+        subtitle: 'Cultural Bridge Through Food',
+        description: 'A dual mission as a profitable business and cultural ambassador. Introducing Asian culinary richness to Polish society while maintaining authenticity.',
+        features: [
+          'Educational content about Asian cuisine',
+          'Recipe sharing and cooking tips',
+          'Cultural storytelling behind each product',
+          'Collaborations with chefs and food bloggers',
+          'Sponsorship of international cultural events',
+          'Media coverage promoting Asian food',
+        ],
+        statsNumber: '50+',
+        statsLabel: 'Cultural Events',
+        icon: '🌏',
+        color: 'purple',
+        image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600',
+      },
+    ],
+  },
+  pl: {
+    headerTitle1: 'Nasze',
+    headerTitle2: 'Atuty',
+    headerSubtitle: 'Pięć kluczowych atutów, które sprawiają, że Asian Grocery to wybór nr 1 w Polsce.',
+    excellenceNote: 'Doskonali w Asian Grocery od 2019',
+    learnMore: 'Dowiedz się więcej',
+    ctaTitle: 'Poczuj Nasze Atuty Już Dziś',
+    ctaDesc: 'Dołącz do tysięcy klientów korzystających z doświadczenia Asian Grocery',
+    ctaShop: '🛒 Zacznij Zakupy Teraz',
+    ctaContact: '📞 Skontaktuj się z Nami',
+    advantages: [
+      {
+        title: 'Kompletny Sklep Azjatycki',
+        subtitle: 'One-Stop Shopping Experience',
+        description: 'Ponad 2000 autentycznych produktów z Indonezji, Tajlandii, Korei, Japonii i Wietnamu. Od przypraw po ulubione przekąski — wszystko w jednym miejscu.',
+        features: [
+          '2000+ produktów z 10+ krajów Azji',
+          'Cotygodniowe dostawy świeżych produktów',
+          'Bezpośredni import od oficjalnych dystrybutorów',
+          'Pełne kategorie: przyprawy, instant, mrożonki, przekąski',
+          'Produkty halal z certyfikatem',
+          'Ekskluzywne marki niedostępne gdzie indziej',
+        ],
+        statsNumber: '2000+',
+        statsLabel: 'Produkty Azjatyckie',
+        icon: '🏪',
+        color: 'red',
+        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600',
+      },
+      {
+        title: 'Autentyczna Kuchnia Indonezyjska',
+        subtitle: 'Smak Domu',
+        description: 'Specjalizujemy się w autentycznych daniach i przyprawach indonezyjskich. Od instant rendang po tradycyjne krakersy — zachowujemy smak jak w Indonezji.',
+        features: [
+          'Autentyczne przyprawy do rendangu, gudegu, rawonu',
+          'Instant zupki znanych indonezyjskich marek',
+          'Tradycyjne krakersy i przekąski',
+          'Oryginalne indonezyjskie sosy i sambale',
+          'Mrożone dania gotowe do spożycia',
+          'Bezpośredni import od zaufanych producentów',
+        ],
+        statsNumber: '500+',
+        statsLabel: 'Produkty Indonezyjskie',
+        icon: '🇮🇩',
+        color: 'red',
+        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600',
+      },
+      {
+        title: 'Konkurencyjna Cena i Wysoka Jakość',
+        subtitle: 'Gwarancja Najlepszej Wartości',
+        description: 'Zapewniamy najlepsze ceny bez kompromisów jakościowych. Wydajny łańcuch dostaw pozwala na konkurencyjne ceny produktów premium.',
+        features: [
+          'Gwarancja dopasowania ceny',
+          'Zniżki hurtowe przy większych zakupach',
+          'Program lojalnościowy z cashbackiem',
+          'Rygorystyczna kontrola jakości przed wystawieniem',
+          'Gwarancja satysfakcji lub zwrot pieniędzy',
+          'Tygodniowe promocje i oferty specjalne',
+        ],
+        statsNumber: '25%',
+        statsLabel: 'Średnie Oszczędności',
+        icon: '💰',
+        color: 'green',
+        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600',
+      },
+      {
+        title: 'Połączone Centrum Społeczności',
+        subtitle: 'Centrum Społeczności Azjatyckiej w Polsce',
+        description: 'To więcej niż sklep — punkt spotkań społeczności azjatyckiej. Łączymy diasporę z lokalnymi miłośnikami jedzenia poprzez wydarzenia i aktywności.',
+        features: [
+          'Regularne spotkania społeczności i potlucki',
+          'Warsztaty kulinarne z indonezyjskimi szefami',
+          'Współpraca przy festiwalach kulturowych',
+          'Społeczność online 5000+ członków',
+          'Catering wydarzeń dla społeczności',
+          'Partnerstwa z organizacjami azjatyckimi',
+        ],
+        statsNumber: '5000+',
+        statsLabel: 'Członkowie Społeczności',
+        icon: '🤝',
+        color: 'blue',
+        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600',
+      },
+      {
+        title: 'Misja Kulturowa i Biznesowa',
+        subtitle: 'Most Kulturowy przez Jedzenie',
+        description: 'Podwójna misja — rentowny biznes i ambasador kultury. Wprowadzanie bogactwa kuchni azjatyckiej do polskiego społeczeństwa przy zachowaniu autentyczności.',
+        features: [
+          'Edukacyjne treści o kuchni azjatyckiej',
+          'Wymiana przepisów i wskazówki kulinarne',
+          'Opowieści kulturowe stojące za produktami',
+          'Współpraca z szefami kuchni i blogerami',
+          'Sponsoring wydarzeń kulturalnych',
+          'Publikacje medialne promujące azjatycką kuchnię',
+        ],
+        statsNumber: '50+',
+        statsLabel: 'Wydarzenia Kulturalne',
+        icon: '🌏',
+        color: 'purple',
+        image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600',
+      },
+    ],
+  },
+} as const;
+
 // Interface for Advantage
 interface Advantage {
   id: number;
@@ -45,114 +360,7 @@ interface FAQItem {
   category: string;
 }
 
-// Sample advantages data
-const advantages: Advantage[] = [
-  {
-    id: 1,
-    title: "Asian Grocery Terlengkap",
-    subtitle: "One-Stop Shopping Experience",
-    description: "Menyediakan lebih dari 2000+ produk Asia authentic dari Indonesia, Thailand, Korea, Jepang, dan Vietnam. Dari bumbu dapur hingga snack favorit, semua tersedia di satu tempat.",
-    icon: "🏪",
-    color: "red",
-    features: [
-      "2000+ produk dari 10+ negara Asia",
-      "Weekly restock dengan produk fresh",
-      "Import langsung dari distributor resmi",
-      "Kategori lengkap: bumbu, instant, frozen, snack",
-      "Produk halal bersertifikat",
-      "Exclusive brands tidak tersedia di tempat lain"
-    ],
-    stats: {
-      number: "2000+",
-      label: "Asian Products"
-    },
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600"
-  },
-  {
-    id: 2,
-    title: "Makanan Indonesia Authentic",
-    subtitle: "Taste of Home, Rasa Kampung Halaman",
-    description: "Spesialisasi dalam makanan dan bumbu Indonesia authentic. Dari rendang instant hingga kerupuk tradisional, kami memastikan rasa yang sama persis seperti di Indonesia.",
-    icon: "🇮🇩",
-    color: "red",
-    features: [
-      "Bumbu rendang, gudeg, rawon authentic",
-      "Mie instant semua brand terkenal Indonesia",
-      "Kerupuk dan cemilan tradisional",
-      "Sambal dan saus asli Indonesia",
-      "Frozen food ready-to-eat Indonesian",
-      "Import direct dari produsen terpercaya"
-    ],
-    stats: {
-      number: "500+",
-      label: "Indonesian Products"
-    },
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600"
-  },
-  {
-    id: 3,
-    title: "Harga Bersaing & Kualitas Premium",
-    subtitle: "Best Value for Money Guarantee",
-    description: "Komitmen memberikan harga terbaik tanpa mengorbankan kualitas. Sistem supply chain efisien memungkinkan kami menawarkan harga competitive untuk produk premium.",
-    icon: "💰",
-    color: "green",
-    features: [
-      "Price match guarantee dengan kompetitor",
-      "Bulk discount untuk pembelian grosir",
-      "Member loyalty program dengan cashback",
-      "Quality control ketat sebelum display",
-      "Garansi kepuasan atau uang kembali",
-      "Weekly promotion dan special offers"
-    ],
-    stats: {
-      number: "25%",
-      label: "Average Savings"
-    },
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600"
-  },
-  {
-    id: 4,
-    title: "Connected Community Hub",
-    subtitle: "Pusat Komunitas Asia di Polandia",
-    description: "Lebih dari sekedar toko, kami adalah meeting point komunitas Asia. Menghubungkan diaspora Asia dengan local food enthusiasts melalui berbagai aktivitas dan event.",
-    icon: "🤝",
-    color: "blue",
-    features: [
-      "Regular community gathering & potluck",
-      "Cooking workshop dengan chef Indonesia",
-      "Cultural festival collaboration",
-      "Online community dengan 5000+ members",
-      "Event catering untuk komunitas",
-      "Partnership dengan organisasi Asia"
-    ],
-    stats: {
-      number: "5000+",
-      label: "Community Members"
-    },
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600"
-  },
-  {
-    id: 5,
-    title: "Misi Budaya & Bisnis",
-    subtitle: "Cultural Bridge Through Food",
-    description: "Misi ganda sebagai bisnis profitable sekaligus cultural ambassador. Memperkenalkan kekayaan kuliner Asia kepada masyarakat Polandia sambil mempertahankan authenticity.",
-    icon: "🌏",
-    color: "purple",
-    features: [
-      "Educational content tentang Asian cuisine",
-      "Recipe sharing dan cooking tips",
-      "Cultural storytelling behind setiap produk",
-      "Kolaborasi dengan chef dan food blogger",
-      "Sponsorship event budaya internasional",
-      "Media coverage untuk promosi Asian food"
-    ],
-    stats: {
-      number: "50+",
-      label: "Cultural Events"
-    },
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600"
-  }
-];
+// advantages will be built from translations
 
 // Sample testimonials data
 const testimonials: Testimonial[] = [
@@ -239,6 +447,9 @@ export default function AdvantagesPage() {
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
+  const [language, setLanguage] = useState<Language>('id');
+
+  const t = translations[language];
 
   useEffect(() => {
     const timer = setTimeout(() => setIsPageLoaded(true), 100);
@@ -252,6 +463,34 @@ export default function AdvantagesPage() {
 
     return () => clearInterval(testimonialTimer);
   }, []);
+
+  // Sync language from storage and header events
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const saved = window.localStorage.getItem('preferred-language');
+      if (saved === 'en' || saved === 'id' || saved === 'pl') setLanguage(saved);
+    } catch {}
+    const onLanguageChanged = (e: Event) => {
+      const detail = (e as CustomEvent).detail as Language | undefined;
+      if (detail === 'en' || detail === 'id' || detail === 'pl') setLanguage(detail);
+    };
+    window.addEventListener('languageChanged', onLanguageChanged as EventListener);
+    return () => window.removeEventListener('languageChanged', onLanguageChanged as EventListener);
+  }, []);
+
+  // Build localized advantages
+  const advantages: Advantage[] = t.advantages.map((a, idx) => ({
+    id: idx + 1,
+    title: a.title,
+    subtitle: a.subtitle,
+    description: a.description,
+    icon: a.icon,
+    color: a.color,
+    features: [...a.features],
+    stats: { number: a.statsNumber, label: a.statsLabel },
+    image: a.image,
+  }));
 
   const faqCategories = ['all', 'Keunggulan', 'Kualitas', 'Harga', 'Komunitas', 'Bisnis'];
 
@@ -289,18 +528,17 @@ export default function AdvantagesPage() {
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
           <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-6 leading-tight">
-            Keunggulan
+            {t.headerTitle1}
             <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
-              {" "}Kami
+              {" "}{t.headerTitle2}
             </span>
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Lima keunggulan utama yang menjadikan Asian Grocery pilihan #1 
-            untuk kebutuhan kuliner Asia di Polandia.
+            {t.headerSubtitle}
           </p>
           <div className="flex items-center justify-center gap-2 mt-4 text-red-600">
             <Award size={20} />
-            <span className="font-medium">Excellence in Asian Grocery Since 2019</span>
+            <span className="font-medium">{t.excellenceNote}</span>
           </div>
         </div>
 
@@ -356,7 +594,7 @@ export default function AdvantagesPage() {
                         onClick={() => setActiveAdvantage(activeAdvantage === advantage.id ? null : advantage.id)}
                         className={`bg-gradient-to-r ${getColorClasses(advantage.color)} text-white px-8 py-4 rounded-2xl font-bold hover:shadow-lg transition-all duration-300 flex items-center gap-2`}
                       >
-                        Pelajari Lebih Detail
+                        {t.learnMore}
                         <ChevronRight size={20} />
                       </button>
                     </div>
@@ -388,17 +626,14 @@ export default function AdvantagesPage() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-red-600 to-red-500 rounded-3xl p-12 text-white">
-            <h2 className="text-3xl font-bold mb-4">Rasakan Keunggulan Kami Sekarang</h2>
-            <p className="text-xl mb-8 text-red-100">
-              Bergabunglah dengan ribuan customer yang telah merasakan 
-              excellence of Asian Grocery experience
-            </p>
+            <h2 className="text-3xl font-bold mb-4">{t.ctaTitle}</h2>
+            <p className="text-xl mb-8 text-red-100">{t.ctaDesc}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-red-600 px-8 py-4 rounded-2xl font-bold hover:bg-red-50 transition-all">
-                🛒 Mulai Belanja Sekarang
+                {t.ctaShop}
               </button>
               <button className="bg-red-700 text-white px-8 py-4 rounded-2xl font-bold hover:bg-red-800 transition-all">
-                📞 Hubungi Kami
+                {t.ctaContact}
               </button>
             </div>
           </div>

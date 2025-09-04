@@ -35,6 +35,177 @@ interface Testimonial {
   product: string;
 }
 
+// Translation content for page copy
+interface HomeTranslationContent {
+  heroBadge: string;
+  heroTitleLine1: string;
+  heroTitleLine2: string;
+  heroDescription: string;
+  viewBestProducts: string;
+  viewRestaurant: string;
+  satisfiedCustomers: string;
+
+  statsCustomers: string;
+  statsProducts: string;
+  statsRating: string;
+  statsHalal: string;
+
+  whyChooseHeading: string;
+  whyChooseSubtitle: string;
+  reason1Title: string;
+  reason1Desc: string;
+  reason2Title: string;
+  reason2Desc: string;
+  reason3Title: string;
+  reason3Desc: string;
+
+  featuredHeading: string;
+  featuredSubtitle: string;
+  popularBadge: string;
+
+  testimonialsHeading: string;
+  testimonialsSubtitle: string;
+
+  ctaHeading: string;
+  ctaSubtitle: string;
+  ctaWhatsApp: string;
+  ctaSeeLocation: string;
+}
+
+type LanguageKey = 'en' | 'id' | 'pl';
+
+const translations: Record<LanguageKey, HomeTranslationContent> = {
+  id: {
+    heroBadge: 'Terpercaya di Polandia',
+    heroTitleLine1: 'Asian Grocery &',
+    heroTitleLine2: 'Indonesian Food',
+    heroDescription:
+      'IndoAsiaFood menghadirkan cita rasa Asia langsung ke Polandia. Menyediakan lebih dari 500 produk autentik dari berbagai negara Asia, mulai dari bumbu dapur, camilan, hingga kebutuhan sehari-hari. Lengkap dengan restoran khas Indonesia yang menyajikan hidangan autentik Nusantara',
+    viewBestProducts: 'Lihat Produk Terbaik',
+    viewRestaurant: 'Lihat Restoran',
+    satisfiedCustomers: 'Pelanggan Puas',
+
+    statsCustomers: 'Pelanggan Terlayani',
+    statsProducts: 'Produk Tersedia',
+    statsRating: 'Rating Kepuasan',
+    statsHalal: 'Produk Halal',
+
+    whyChooseHeading: 'Mengapa Memilih Kami?',
+    whyChooseSubtitle:
+      'Keunggulan layanan yang membuat berbelanja produk Asia di Polandia jadi mudah dan nyaman',
+    reason1Title: 'Melayani Komunitas Asia & Pecinta Cita Rasa Asia',
+    reason1Desc:
+      'Kami memahami kebutuhan komunitas Asia di Polandia sekaligus menghadirkan pengalaman kuliner untuk siapa pun yang mencintai cita rasa Asia. Dengan staf berpengalaman yang dapat berkomunikasi dalam berbagai bahasa, kami siap melayani Anda dengan hangat.',
+    reason2Title: 'Lokasi Strategis & Pengiriman',
+    reason2Desc:
+      'Berlokasi di Mława dengan layanan pengiriman ke seluruh Polandia. Mudah diakses dan tersedia layanan online shopping.',
+    reason3Title: 'Rasa Autentik Indonesia',
+    reason3Desc:
+      'Menghadirkan cita rasa asli Nusantara dengan resep tradisional dan bahan-bahan import langsung dari Indonesia.',
+
+    featuredHeading: 'Produk Unggulan',
+    featuredSubtitle:
+      'Pilihan produk terbaik dari Asia dengan kualitas terjamin dan rasa autentik',
+    popularBadge: 'Populer',
+
+    testimonialsHeading: 'Testimoni Pelanggan',
+    testimonialsSubtitle:
+      'Dengarkan pengalaman mereka yang telah merasakan produk berkualitas dan pelayanan terbaik kami',
+
+    ctaHeading: 'Siap Merasakan Cita Rasa Asia?',
+    ctaSubtitle:
+      'Kunjungi toko kami di Mława atau hubungi untuk pemesanan online dan delivery ke seluruh Polandia',
+    ctaWhatsApp: 'WhatsApp Order',
+    ctaSeeLocation: 'Lihat Lokasi Toko',
+  },
+  en: {
+    heroBadge: 'Trusted in Poland',
+    heroTitleLine1: 'Asian Grocery &',
+    heroTitleLine2: 'Indonesian Food',
+    heroDescription:
+      'IndoAsiaFood brings authentic Asian flavors straight to Poland. We offer 500+ genuine products from across Asia, from pantry spices and snacks to daily essentials. Complete with an Indonesian restaurant serving traditional Nusantara dishes.',
+    viewBestProducts: 'Browse Top Products',
+    viewRestaurant: 'View Restaurant',
+    satisfiedCustomers: 'Satisfied Customers',
+
+    statsCustomers: 'Customers Served',
+    statsProducts: 'Products Available',
+    statsRating: 'Satisfaction Rating',
+    statsHalal: 'Halal Products',
+
+    whyChooseHeading: 'Why Choose Us?',
+    whyChooseSubtitle:
+      'Service advantages that make shopping for Asian products in Poland easy and convenient',
+    reason1Title: 'Serving Asian Communities & Flavor Lovers',
+    reason1Desc:
+      'We understand the needs of Asian communities in Poland while welcoming anyone who loves Asian cuisine. Our experienced, multilingual staff is ready to serve you with warmth.',
+    reason2Title: 'Strategic Location & Delivery',
+    reason2Desc:
+      'Based in Mława with delivery across Poland. Easy to reach and online shopping available.',
+    reason3Title: 'Authentic Indonesian Taste',
+    reason3Desc:
+      'Bringing true Nusantara flavors with traditional recipes and ingredients imported directly from Indonesia.',
+
+    featuredHeading: 'Featured Products',
+    featuredSubtitle:
+      'Top selections from Asia with guaranteed quality and authentic taste',
+    popularBadge: 'Popular',
+
+    testimonialsHeading: 'Customer Testimonials',
+    testimonialsSubtitle:
+      'Hear from customers who have enjoyed our quality products and excellent service',
+
+    ctaHeading: 'Ready to Taste Asia?',
+    ctaSubtitle:
+      'Visit our store in Mława or contact us for online orders and delivery throughout Poland',
+    ctaWhatsApp: 'WhatsApp Order',
+    ctaSeeLocation: 'See Store Location',
+  },
+  pl: {
+    heroBadge: 'Zaufany w Polsce',
+    heroTitleLine1: 'Sklep Azjatycki &',
+    heroTitleLine2: 'Kuchnia Indonezyjska',
+    heroDescription:
+      'IndoAsiaFood sprowadza autentyczne smaki Azji prosto do Polski. Oferujemy ponad 500 oryginalnych produktów z całej Azji: przyprawy, przekąski i codzienne artykuły. Do tego restauracja z tradycyjnymi daniami kuchni indonezyjskiej.',
+    viewBestProducts: 'Zobacz Najlepsze Produkty',
+    viewRestaurant: 'Zobacz Restaurację',
+    satisfiedCustomers: 'Zadowoleni Klienci',
+
+    statsCustomers: 'Obsłużonych Klientów',
+    statsProducts: 'Dostępnych Produktów',
+    statsRating: 'Ocena Satysfakcji',
+    statsHalal: 'Produkty Halal',
+
+    whyChooseHeading: 'Dlaczego My?',
+    whyChooseSubtitle:
+      'Atuty naszej obsługi sprawiają, że zakupy produktów azjatyckich w Polsce są proste i wygodne',
+    reason1Title: 'Dla społeczności azjatyckiej i miłośników smaków',
+    reason1Desc:
+      'Rozumiemy potrzeby społeczności azjatyckiej w Polsce i zapraszamy wszystkich, którzy kochają kuchnię azjatycką. Nasz doświadczony, wielojęzyczny zespół obsługuje z uśmiechem.',
+    reason2Title: 'Lokalizacja i dostawa',
+    reason2Desc:
+      'Siedziba w Mławie z dostawą na terenie całej Polski. Łatwy dojazd i zakupy online dostępne.',
+    reason3Title: 'Autentyczny smak Indonezji',
+    reason3Desc:
+      'Prawdziwe smaki Nusantary dzięki tradycyjnym przepisom i składnikom importowanym bezpośrednio z Indonezji.',
+
+    featuredHeading: 'Polecane Produkty',
+    featuredSubtitle:
+      'Najlepszy wybór z Azji: gwarantowana jakość i autentyczny smak',
+    popularBadge: 'Popularne',
+
+    testimonialsHeading: 'Opinie Klientów',
+    testimonialsSubtitle:
+      'Poznaj opinie osób, które cenią nasze produkty i obsługę',
+
+    ctaHeading: 'Gotowi na smaki Azji?',
+    ctaSubtitle:
+      'Odwiedź nasz sklep w Mławie lub skontaktuj się w sprawie zamówień online i dostawy w całej Polsce',
+    ctaWhatsApp: 'Zamów przez WhatsApp',
+    ctaSeeLocation: 'Zobacz Lokalizację Sklepu',
+  },
+};
+
 // Sample products data
 const featuredProducts: Product[] = [
   {
@@ -105,46 +276,14 @@ const testimonials: Testimonial[] = [
   }
 ];
 
-// Why choose us reasons
-const whyChooseUs = [
-  // {
-  //   icon: Shield,
-  //   title: "Produk Halal & Berkualitas",
-  //   description: "Semua produk telah tersertifikasi halal dan dipilih langsung dari supplier terpercaya di Asia untuk menjamin keaslian rasa.",
-  //   color: "bg-red-600"
-  // },
-  {
-    icon: Users,
-    title: "Melayani Komunitas Asia & Pecinta Cita Rasa Asia",
-    description: "Kami memahami kebutuhan komunitas Asia di Polandia sekaligus menghadirkan pengalaman kuliner untuk siapa pun yang mencintai cita rasa Asia. Dengan staf berpengalaman yang dapat berkomunikasi dalam berbagai bahasa, kami siap melayani Anda dengan hangat.",
-    color: "bg-red-600"
-  },
-  {
-    icon: MapPin,
-    title: "Lokasi Strategis & Pengiriman",
-    description: "Berlokasi di Mława dengan layanan pengiriman ke seluruh Polandia. Mudah diakses dan tersedia layanan online shopping.",
-    color: "bg-red-600"
-  },
-  {
-    icon: DollarSign,
-    title: "Rasa Autentik Indonesia",
-    description: "Menghadirkan cita rasa asli Nusantara dengan resep tradisional dan bahan-bahan import langsung dari Indonesia.",
-    color: "bg-red-600"
-  }
-];
-
-// Achievement stats
-const stats = [
-  { number: "2,500+", label: "Pelanggan Terlayani", icon: Users },
-  { number: "500+", label: "Produk Tersedia", icon: Package },
-  { number: "4.8/5", label: "Rating Kepuasan", icon: Star },
-  { number: "100%", label: "Produk Halal", icon: Shield }
-];
+// Why choose us reasons and achievement stats will be created inside the component
 
 export default function HomePage() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
+  const [language, setLanguage] = useState<LanguageKey>('en');
+  const t = translations[language];
 
   useEffect(() => {
     const timer = setTimeout(() => setIsPageLoaded(true), 100);
@@ -159,6 +298,28 @@ export default function HomePage() {
     return () => clearInterval(interval);
   }, []);
 
+  // Sync language from localStorage and header events
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const saved = window.localStorage.getItem('preferred-language');
+      if (saved === 'en' || saved === 'id' || saved === 'pl') {
+        setLanguage(saved);
+      }
+    } catch {
+      // ignore
+    }
+
+    const onLanguageChanged = (e: Event) => {
+      const detail = (e as CustomEvent).detail as LanguageKey | undefined;
+      if (detail === 'en' || detail === 'id' || detail === 'pl') {
+        setLanguage(detail);
+      }
+    };
+    window.addEventListener('languageChanged', onLanguageChanged as EventListener);
+    return () => window.removeEventListener('languageChanged', onLanguageChanged as EventListener);
+  }, []);
+
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('id-ID').format(price);
   };
@@ -171,6 +332,20 @@ export default function HomePage() {
       default: return 'bg-red-600';
     }
   };
+
+  // Build dynamic reasons and stats using translations
+  const whyChooseUs = [
+    { icon: Users, title: t.reason1Title, description: t.reason1Desc, color: 'bg-red-600' },
+    { icon: MapPin, title: t.reason2Title, description: t.reason2Desc, color: 'bg-red-600' },
+    { icon: DollarSign, title: t.reason3Title, description: t.reason3Desc, color: 'bg-red-600' },
+  ];
+
+  const stats = [
+    { number: '2,500+', label: t.statsCustomers, icon: Users },
+    { number: '500+', label: t.statsProducts, icon: Package },
+    { number: '4.8/5', label: t.statsRating, icon: Star },
+    { number: '100%', label: t.statsHalal, icon: Shield },
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -200,28 +375,28 @@ export default function HomePage() {
               <div className={`transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-x-0 opacity-100' : '-translate-x-16 opacity-0'}`}>
                 <div className="inline-flex items-center bg-red-600 text-white px-4 py-2 rounded-full mb-6">
                   <Shield className="w-4 h-4 mr-2" />
-                  <span className="text-sm font-semibold">Terpercaya di Polandia</span>
+                  <span className="text-sm font-semibold">{t.heroBadge}</span>
                 </div>
                 
                 <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-6 leading-tight">
-                  Asian Grocery &
+                  {t.heroTitleLine1}
                   <span className="block bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
-                    Indonesian Food
+                    {t.heroTitleLine2}
                   </span>
                 </h1>
                 
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  IndoAsiaFood menghadirkan cita rasa Asia langsung ke Polandia. Menyediakan lebih dari 500 produk autentik dari berbagai negara Asia, mulai dari bumbu dapur, camilan, hingga kebutuhan sehari-hari. Lengkap dengan restoran khas Indonesia yang menyajikan hidangan autentik Nusantara
+                  {t.heroDescription}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 shadow-xl flex items-center justify-center">
-                    Lihat Produk Terbaik
+                    {t.viewBestProducts}
                     <ChevronRight className="ml-2 w-5 h-5" />
                   </button>
                   <button className="bg-white/80 backdrop-blur-sm hover:bg-white text-gray-800 border border-gray-200 px-8 py-4 rounded-full font-semibold transition-all flex items-center justify-center shadow-lg">
                     <Play className="mr-2 w-5 h-5" />
-                    Lihat Restoran
+                    {t.viewRestaurant}
                   </button>
                 </div>
               </div>
@@ -244,7 +419,7 @@ export default function HomePage() {
                       </div>
                       <div>
                         <div className="text-2xl font-bold text-gray-800">2,500+</div>
-                        <div className="text-gray-600 text-sm">Pelanggan Puas</div>
+                        <div className="text-gray-600 text-sm">{t.satisfiedCustomers}</div>
                       </div>
                     </div>
                   </div>
@@ -287,9 +462,9 @@ export default function HomePage() {
       <section className="py-20 bg-red-50">
         <div className="container mx-auto px-6">
           <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Mengapa Memilih Kami?</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">{t.whyChooseHeading}</h2>
             <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              Keunggulan layanan yang membuat berbelanja produk Asia di Polandia jadi mudah dan nyaman
+              {t.whyChooseSubtitle}
             </p>
           </div>
           
@@ -317,9 +492,9 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Produk Unggulan</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">{t.featuredHeading}</h2>
             <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              Pilihan produk terbaik dari Asia dengan kualitas terjamin dan rasa autentik
+              {t.featuredSubtitle}
             </p>
           </div>
           
@@ -345,7 +520,7 @@ export default function HomePage() {
                     <div className="absolute top-4 right-4">
                       <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                         <Star className="w-3 h-3 fill-current" />
-                        Popular
+                        {t.popularBadge}
                       </span>
                     </div>
                   )}
@@ -367,9 +542,9 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-br from-red-50 to-red-100 hidden">
         <div className="container mx-auto px-6">
           <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Testimoni Pelanggan</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">{t.testimonialsHeading}</h2>
             <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              Dengarkan pengalaman mereka yang telah merasakan produk berkualitas dan pelayanan terbaik kami
+              {t.testimonialsSubtitle}
             </p>
           </div>
           
@@ -418,20 +593,20 @@ export default function HomePage() {
         <div className="container mx-auto px-6 text-center">
           <div className={`transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
             <h2 className="text-4xl font-bold text-white mb-6">
-              Siap Merasakan Cita Rasa Asia?
+              {t.ctaHeading}
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Kunjungi toko kami di Mława atau hubungi untuk pemesanan online dan delivery ke seluruh Polandia
+              {t.ctaSubtitle}
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="https://wa.me/48123456789" className="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-xl">
                 <Phone size={20} />
-                WhatsApp Order
+                {t.ctaWhatsApp}
               </a>
               <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full font-semibold transition-all flex items-center justify-center gap-2">
                 <MapPin size={20} />
-                Lihat Lokasi Toko
+                {t.ctaSeeLocation}
               </button>
             </div>
           </div>

@@ -83,6 +83,7 @@ interface TranslationContent {
 interface Translations {
   pl: TranslationContent;
   en: TranslationContent;
+  id: TranslationContent;
 }
 
 // Interface for Contact Info Card data
@@ -229,6 +230,64 @@ const translations: Translations = {
     whatsappMessage:
       "Hello! I am interested in Asian Grocery products and would like to get more information about the available assortment.",
   },
+  id: {
+    contactUs: "Hubungi Kami",
+    heroTitle: "Temukan Cita Rasa Asia di Jantung",
+    heroTitleHighlight: " Polandia",
+    heroDescription:
+      "Tim kami siap membantu Anda menemukan produk Asia autentik. Dapatkan konsultasi gratis mengenai koleksi produk kami, ketersediaan bahan segar, dan semua informasi yang Anda butuhkan untuk dapur Asia Anda.",
+    freeConsultation: "Konsultasi Gratis via",
+    whatsapp: " WhatsApp",
+    whatsappDescription:
+      "Dapatkan informasi lengkap tentang koleksi produk Asia kami, sayuran segar, bumbu, serta harga. Tim kami tersedia 24/7 dengan respons cepat dan informasi akurat.",
+    quickResponse: "Respon Cepat",
+    quickResponseDesc:
+      "Tim layanan pelanggan kami selalu siap membantu dengan informasi yang jelas.",
+    productInfo: "Informasi Produk",
+    productInfoDesc:
+      "Konsultasi detail terkait ketersediaan, kesegaran, dan asal produk Asia.",
+    orderAssistance: "Bantuan Pemesanan",
+    orderAssistanceDesc:
+      "Panduan lengkap proses pemesanan dan pengiriman produk.",
+    contactWhatsApp: "Hubungi via WhatsApp",
+    promoText:
+      "✨ Konsultasi gratis • 🥢 Info produk Asia • 🚚 Panduan pemesanan",
+    contactInfo: "Informasi Kontak",
+    phone: "Telepon",
+    phoneDesc: "Toko (Senin-Sabtu)",
+    email: "Email",
+    emailDesc: "Respon dalam 2-4 jam kerja",
+    address: "Alamat",
+    addressContent: "Mława, Provinsi Mazowieckie",
+    addressDesc: "Polandia",
+    operatingHours: "Jam Operasional",
+    monday: "Senin - Jumat",
+    mondayTime: "08:00 - 20:00",
+    saturday: "Sabtu",
+    saturdayTime: "08:00 - 18:00",
+    sunday: "Minggu",
+    sundayTime: "10:00 - 16:00",
+    followUs: "Ikuti Kami",
+    followers: "pengikut",
+    sendMessage: "Kirim Pesan",
+    formDescription:
+      "Atau kirim pesan melalui formulir di bawah ini. Kami akan membalas dalam 2-4 jam kerja.",
+    messageSent: "Pesan Terkirim!",
+    thankYou: "Terima kasih, kami akan segera menghubungi Anda.",
+    fullName: "Nama Lengkap",
+    fullNamePlaceholder: "Nama Anda",
+    emailPlaceholder: "email@contoh.com",
+    subject: "Subjek",
+    subjectPlaceholder: "Pertanyaan Produk Asia",
+    message: "Pesan",
+    messagePlaceholder:
+      "Tanyakan apa pun tentang produk Asia kami, ketersediaan, pengiriman, atau informasi lain tentang Asian Grocery...",
+    sending: "Mengirim...",
+    sendBtn: "Kirim Pesan",
+    required: "*",
+    whatsappMessage:
+      "Halo! Saya tertarik dengan produk Asian Grocery dan ingin mendapatkan informasi lebih lanjut tentang koleksi yang tersedia.",
+  },
 };
 
 export default function AsianGroceryContactPage() {
@@ -243,19 +302,19 @@ export default function AsianGroceryContactPage() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   // Inline useLanguage hook
-  const useLanguage = (initialLanguage: "pl" | "en" = "pl") => {
-    const [language, setLanguage] = useState<"pl" | "en">(initialLanguage);
+  const useLanguage = (initialLanguage: "pl" | "en" | "id" = "pl") => {
+    const [language, setLanguage] = useState<"pl" | "en" | "id">(initialLanguage);
 
     useEffect(() => {
       const savedLanguage = localStorage.getItem("preferred-language");
-      if (savedLanguage === "pl" || savedLanguage === "en") {
+      if (savedLanguage === "pl" || savedLanguage === "en" || savedLanguage === "id") {
         setLanguage(savedLanguage);
       }
     }, []);
 
     useEffect(() => {
-      const handleLanguageChange = (event: CustomEvent<"pl" | "en">) => {
-        if (event.detail === "pl" || event.detail === "en") {
+      const handleLanguageChange = (event: CustomEvent<"pl" | "en" | "id">) => {
+        if (event.detail === "pl" || event.detail === "en" || event.detail === "id") {
           setLanguage(event.detail);
         }
       };
@@ -263,7 +322,7 @@ export default function AsianGroceryContactPage() {
       const handleStorageChange = (event: StorageEvent) => {
         if (
           event.key === "preferred-language" &&
-          (event.newValue === "pl" || event.newValue === "en")
+          (event.newValue === "pl" || event.newValue === "en" || event.newValue === "id")
         ) {
           setLanguage(event.newValue);
         }
