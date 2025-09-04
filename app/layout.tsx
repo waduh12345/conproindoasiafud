@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "INDOASIAFOOD",
   description: "Connecting Asia to Poland. Toko Asia terlengkap di Mława dengan 500+ produk autentik. Dari bumbu dapur Nusantara hingga makanan siap saji khas Indonesia.",
   icons: {
-    icon: "/logo.png",
+    icon: "/logo.jpg",
   },
 };
 

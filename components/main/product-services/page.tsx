@@ -68,14 +68,14 @@ const advantages: Advantage[] = [
   {
     id: 2,
     title: "Indonesian Food",
-    subtitle: "Taste of Home, Rasa Kampung Halaman",
-    description: "Spesialisasi dalam makanan dan bumbu Indonesia authentic. Dari rendang instant hingga kerupuk tradisional, kami memastikan rasa yang sama persis seperti di Indonesia.",
+    subtitle: "Obat kangen masakan emak !!!",
+    description: "Nikmati kelezatan masakan Nusantara yang autentik di Polandia. Dari rendang yang kaya rempah, mie instan favorit, hingga cendol yang memanjakan lidah— semua dihadirkan dengan autentik seperti di tanah air. Restoran kami bukan sekadar makanan, tapi juga menghadirkan kembali kenangan dan kehangatan rumah.",
     icon: "🇮🇩",
     color: "red",
     features: [
-      "Restoran & café khas Indonesia (berbasis di Mława, Polandia)",
-      "Frozen food & makanan siap saji khas Nusantara",
-      "Catering untuk komunitas, perusahaan, dan event budaya",
+      "Restoran khas Indonesia di Mława, Polandia",
+      "Makanan beku & hidangan siap saji Nusantara yang praktis",
+      "Layanan katering untuk komunitas, perusahaan, hingga acara budaya",
     ],
     stats: {
       number: "500+",

@@ -148,11 +148,11 @@ export default function AsianGroceryFooter() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="rounded-lg flex items-center justify-center">
-                  <Image src="/logo.png" alt="Logo" width={56} height={56} />
+                  <Image src="/logo.jpg" alt="Logo" width={56} height={56} />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
-                    INDOSIAFOOD
+                    INDOASIAFOOD
                   </h3>
                 </div>
               </div>

@@ -107,16 +107,16 @@ const testimonials: Testimonial[] = [
 
 // Why choose us reasons
 const whyChooseUs = [
-  {
-    icon: Shield,
-    title: "Produk Halal & Berkualitas",
-    description: "Semua produk telah tersertifikasi halal dan dipilih langsung dari supplier terpercaya di Asia untuk menjamin keaslian rasa.",
-    color: "bg-red-600"
-  },
+  // {
+  //   icon: Shield,
+  //   title: "Produk Halal & Berkualitas",
+  //   description: "Semua produk telah tersertifikasi halal dan dipilih langsung dari supplier terpercaya di Asia untuk menjamin keaslian rasa.",
+  //   color: "bg-red-600"
+  // },
   {
     icon: Users,
-    title: "Melayani Komunitas Asia",
-    description: "Memahami kebutuhan komunitas Asia di Polandia dengan staf yang berpengalaman dan dapat berkomunikasi dalam berbagai bahasa.",
+    title: "Melayani Komunitas Asia & Pecinta Cita Rasa Asia",
+    description: "Kami memahami kebutuhan komunitas Asia di Polandia sekaligus menghadirkan pengalaman kuliner untuk siapa pun yang mencintai cita rasa Asia. Dengan staf berpengalaman yang dapat berkomunikasi dalam berbagai bahasa, kami siap melayani Anda dengan hangat.",
     color: "bg-red-600"
   },
   {
@@ -211,8 +211,7 @@ export default function HomePage() {
                 </h1>
                 
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  Connecting Asia to Poland. Toko Asia terlengkap di Mława dengan 500+ produk autentik. 
-                  Dari bumbu dapur Nusantara hingga makanan siap saji khas Indonesia.
+                  IndoAsiaFood menghadirkan cita rasa Asia langsung ke Polandia. Menyediakan lebih dari 500 produk autentik dari berbagai negara Asia, mulai dari bumbu dapur, camilan, hingga kebutuhan sehari-hari. Lengkap dengan restoran khas Indonesia yang menyajikan hidangan autentik Nusantara
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -294,7 +293,7 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((reason, idx) => (
               <div 
                 key={idx} 

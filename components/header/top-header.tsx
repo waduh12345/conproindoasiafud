@@ -45,7 +45,7 @@ export default function MultilingualTopHeader() {
       ourAdvantage: "Keunggulan Kami",
       clientPartners: "Klien & Mitra",
       contact: "Hubungi Kami",
-      tagline: "Cita Rasa Asia Autentik di Polandia",
+      tagline: "Your Gateway to Asian Flavors.",
     },
     pl: {
       home: "Strona główna",
@@ -187,7 +187,7 @@ export default function MultilingualTopHeader() {
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           {/* Logo */}
           <div className="flex items-center gap-3 group cursor-pointer">
-            <Image src="/logo.png" alt="Logo" width={56} height={56} />
+            <Image src="/logo.jpg" alt="Logo" width={56} height={56} />
             <div className="leading-tight">
               <h1 className="text-lg font-bold text-red-600 group-hover:text-red-700 transition-colors">
                 INDOASIAFOOD
