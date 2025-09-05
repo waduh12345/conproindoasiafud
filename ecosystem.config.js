@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "koperasi-merah-putih.naditechno.id",
+      name: "indoasiafood",
       script: "node_modules/next/dist/bin/next",
       args: "start -p 1046",
     },
