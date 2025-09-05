@@ -44,7 +44,7 @@ const translations = {
     
     // Company Profile
     companyTitle: "Asian Grocery & Indonesian Food",
-    companyDesc1: "Perusahaan kami hadir untuk menjembatani kebutuhan komunitas Asia—khususnya Indonesia—dan masyarakat Polandia yang semakin menggemari produk dan kuliner Asia. Berlokasi strategis di Mława, kami melayani seluruh wilayah Polandia.",
+    companyDesc1: "INDOASIAFOOD dibawah naungan perusahaan MMI CORPORATION SPOKA Z OGRANICZONA ODPOWIEDZIALNOSCIA hadir untuk menjembatani kebutuhan komunitas Asia—khususnya Indonesia—dan masyarakat Polandia yang semakin menggemari produk dan kuliner Asia. Berlokasi strategis di Mława, kami melayani wilayah seluruh Polandia.",
     companyDesc2: "Dengan semangat \"Connecting Asia to Poland\", kami menghadirkan beragam produk berkualitas, halal, dan autentik, mulai dari bahan kebutuhan dapur, snack, hingga hidangan Nusantara yang siap dinikmati.",
     companyDesc3: "Tim kami terdiri dari profesional yang memahami selera komunitas Asia di Polandia, serta berpengalaman dalam menjaga kualitas dan keaslian rasa produk-produk Asia yang kami sediakan.",
     asianProducts: "Produk Asia",
@@ -312,7 +312,7 @@ export default function AboutUsPage() {
   ];
 
   return (
-    <section className="min-h-screen py-16 px-6 md:px-12 bg-gradient-to-b from-red-50 to-white relative overflow-hidden">
+    <section className="min-h-screen py-16 px-6 md:px-12 bg-black/70 from-red-50 to-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-200/20 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-red-300/20 to-transparent rounded-full blur-2xl"></div>
@@ -332,14 +332,14 @@ export default function AboutUsPage() {
             {t.connectingText}
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold text-black mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-300 mb-6 leading-tight">
             {t.aboutUs.split(' ')[0]}
             <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
               {" " + t.aboutUs.split(' ').slice(1).join(' ')}
             </span>
           </h1>
 
-          <p className="text-xl text-black/80 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
             {t.heroDescription}
           </p>
         </div>
@@ -374,7 +374,7 @@ export default function AboutUsPage() {
                 <stat.icon size={20} />
               </div>
               <div className="text-2xl font-bold text-red-600 mb-1">{stat.number}</div>
-              <div className="text-black/80 text-sm">{stat.label}</div>
+              <div className="text-black text-sm">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -386,8 +386,8 @@ export default function AboutUsPage() {
             <div className={`transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`} style={{ transitionDelay: '600ms' }}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
                 <div className="order-2 lg:order-1">
-                  <h2 className="text-3xl font-bold text-black mb-6">{t.companyTitle}</h2>
-                  <div className="space-y-4 text-black/80">
+                  <h2 className="text-3xl font-bold text-gray-300 mb-6">{t.companyTitle}</h2>
+                  <div className="space-y-4 text-gray-300">
                     <p>{t.companyDesc1}</p>
                     <p>{t.companyDesc2}</p>
                     <p>{t.companyDesc3}</p>
@@ -407,7 +407,7 @@ export default function AboutUsPage() {
                       </div>
                       <div>
                         <div className="font-bold text-black">500+</div>
-                        <div className="text-sm text-gray-600">{t.asianProducts}</div>
+                        <div className="text-sm text-black">{t.asianProducts}</div>
                       </div>
                     </div>
                   </div>
@@ -421,7 +421,7 @@ export default function AboutUsPage() {
                       <value.icon className="w-6 h-6 text-red-600" />
                     </div>
                     <h3 className="text-xl font-bold text-black mb-2">{value.title}</h3>
-                    <p className="text-black/80">{value.description}</p>
+                    <p className="text-black">{value.description}</p>
                   </div>
                 ))}
               </div>
@@ -437,9 +437,9 @@ export default function AboutUsPage() {
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-red-50 rounded-full mb-4">
                       <Eye className="w-8 h-8 text-red-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-black">{t.visionTitle}</h3>
+                    <h3 className="text-2xl font-bold text-gray-300">{t.visionTitle}</h3>
                   </div>
-                  <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-6">
+                  <div className="rounded-2xl p-6">
                     <p className="text-lg text-black text-center leading-relaxed">
                       {t.visionText}
                     </p>
@@ -451,7 +451,7 @@ export default function AboutUsPage() {
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-red-50 rounded-full mb-4">
                       <Target className="w-8 h-8 text-red-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-black">{t.missionTitle}</h3>
+                    <h3 className="text-2xl font-bold text-gray-300">{t.missionTitle}</h3>
                   </div>
                   <div className="space-y-4">
                     {[t.mission1, t.mission2, t.mission3, t.mission4].map((mission, idx) => (
@@ -459,7 +459,7 @@ export default function AboutUsPage() {
                         <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                           <CheckCircle className="w-4 h-4 text-white" />
                         </div>
-                        <p className="text-black/80">{mission}</p>
+                        <p className="text-black">{mission}</p>
                       </div>
                     ))}
                   </div>
@@ -472,8 +472,8 @@ export default function AboutUsPage() {
           {activeSection === 'legal' && (
             <div className={`transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`} style={{ transitionDelay: '600ms' }}>
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-black mb-4">{t.certTitle}</h2>
-                <p className="text-black/80 text-lg max-w-2xl mx-auto">
+                <h2 className="text-3xl font-bold text-gray-300 mb-4">{t.certTitle}</h2>
+                <p className="text-black text-lg max-w-2xl mx-auto">
                   {t.certDesc}
                 </p>
               </div>
@@ -484,7 +484,7 @@ export default function AboutUsPage() {
                     <div className={`inline-flex items-center justify-center w-16 h-16 ${cert.color} rounded-full mb-4`}>
                       <cert.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-black mb-2">{cert.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-300 mb-2">{cert.title}</h3>
                   </div>
                 ))}
               </div>
@@ -492,24 +492,24 @@ export default function AboutUsPage() {
               <div className="bg-gradient-to-r from-red-50 to-white rounded-3xl p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="text-xl font-bold text-black mb-4">{t.legalDocs}</h4>
+                    <h4 className="text-xl font-bold text-gray-300 mb-4">{t.legalDocs}</h4>
                     <div className="space-y-3">
                       {["Business Registration Poland", "VAT", "Import License untuk Produk Asia", "Food Safety Certificate"].map((doc, idx) => (
                         <div key={idx} className="flex items-center gap-3">
                           <CheckCircle className="w-5 h-5 text-red-600" />
-                          <span className="text-black">{doc}</span>
+                          <span className="text-gray-300">{doc}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                   
                   <div>
-                    <h4 className="text-xl font-bold text-black mb-4">{t.partnerships}</h4>
+                    <h4 className="text-xl font-bold text-gray-300 mb-4">{t.partnerships}</h4>
                     <div className="space-y-3">
                       {["Supplier Resmi Produk Indonesia", "Partner Asian Food Distributors", "Member Polish Business Association", "Halal Certification Partner"].map((cert, idx) => (
                         <div key={idx} className="flex items-center gap-3">
                           <CheckCircle className="w-5 h-5 text-red-600" />
-                          <span className="text-black">{cert}</span>
+                          <span className="text-gray-300">{cert}</span>
                         </div>
                       ))}
                     </div>
@@ -528,7 +528,7 @@ export default function AboutUsPage() {
             {t.ctaDesc}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="tel:+48123456789" className="bg-white text-black px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-xl">
+            <a href="tel:+48123456789" className="bg-white text-gray-300 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-xl">
               <Phone size={20} />
               {t.callNow}
             </a>

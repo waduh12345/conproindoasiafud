@@ -350,7 +350,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-red-50 via-white to-red-100">
+      <section className="relative min-h-screen overflow-hidden bg-black/90 from-red-50 via-white to-red-100">
         {/* Background Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-500/20 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-red-600/20 to-transparent rounded-full blur-2xl"></div>
@@ -378,14 +378,14 @@ export default function HomePage() {
                   <span className="text-sm font-semibold">{t.heroBadge}</span>
                 </div>
                 
-                <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-6 leading-tight">
+                <h1 className="text-4xl md:text-6xl font-extrabold text-gray-300 mb-6 leading-tight">
                   {t.heroTitleLine1}
                   <span className="block bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
                     {t.heroTitleLine2}
                   </span>
                 </h1>
                 
-                <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                   {t.heroDescription}
                 </p>
                 
@@ -405,7 +405,7 @@ export default function HomePage() {
               <div className={`relative transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-x-0 opacity-100' : 'translate-x-16 opacity-0'}`}>
                 <div className="relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800"
+                    src="/images/hero-indoasiafood.webp"
                     alt="Asian Grocery & Indonesian Food"
                     className="w-full h-140 rounded-3xl shadow-2xl"
                   />
@@ -459,11 +459,11 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-red-50">
+      <section className="py-20 bg-black/80 from-red-50">
         <div className="container mx-auto px-6">
           <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">{t.whyChooseHeading}</h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-300 mb-4">{t.whyChooseHeading}</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               {t.whyChooseSubtitle}
             </p>
           </div>
@@ -589,7 +589,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-red-500">
+      <section className="py-20 bg-black/80 from-red-50">
         <div className="container mx-auto px-6 text-center">
           <div className={`transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
             <h2 className="text-4xl font-bold text-white mb-6">

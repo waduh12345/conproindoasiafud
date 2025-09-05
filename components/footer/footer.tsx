@@ -82,7 +82,7 @@ const translations: Translations = {
       { name: "Frozen Products", href: "/products/frozen" },
     ],
     contactUs: "Contact",
-    address: "Mława, Masovian Voivodeship, Poland",
+    address: "Franciszka Żwirki 26D, 06-500 Mława, Polandia",
     phone: "+48 123 456 789",
     email: "info@asiangrocery.pl",
     copyright: "All rights reserved.",
@@ -136,7 +136,7 @@ export default function AsianGroceryFooter() {
   const WhatsappIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" > <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" /> </svg> );
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 to-black text-white font-sans overflow-hidden">
+    <footer className="relative bg-white backdrop-blur-sm to-black text-black font-sans overflow-hidden">
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-red-600/5 to-red-500/5 rounded-full blur-3xl opacity-50"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-tl from-red-500/5 to-red-600/5 rounded-full blur-2xl opacity-50"></div>
 
@@ -156,7 +156,7 @@ export default function AsianGroceryFooter() {
                   </h3>
                 </div>
               </div>
-              <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+              <p className="text-black-300 mb-4 text-sm leading-relaxed">
                 {t.brandDescription}
               </p>
               <div className="flex items-center gap-3 mt-6">
@@ -166,7 +166,7 @@ export default function AsianGroceryFooter() {
                   { icon: <YoutubeIcon />, href: "#" },
                   { icon: <WhatsappIcon />, href: "https://wa.me/48123456789" },
                 ].map((social: { icon: JSX.Element; href: string }, index: number) => (
-                    <a key={index} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 hover:shadow-lg hover:shadow-red-500/30 transform hover:scale-110 transition-all duration-300" >
+                    <a key={index} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-600 hover:shadow-lg hover:shadow-red-500/30 transform hover:scale-110 transition-all duration-300" >
                       {social.icon}
                     </a>
                 ))}
@@ -180,7 +180,7 @@ export default function AsianGroceryFooter() {
               </h4>
               <div className="space-y-3">
                 {t.quickLinksItems.map((link: QuickLinkItem, index: number) => (
-                  <a key={index} href={link.href} className="text-gray-300 hover:text-red-500 transition-all duration-300 flex items-center gap-3 group text-sm" >
+                  <a key={index} href={link.href} className="text-black-300 hover:text-red-500 transition-all duration-300 flex items-center gap-3 group text-sm" >
                     <span className="w-1.5 h-1.5 bg-red-500 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
                     <span className="group-hover:translate-x-1 transition-transform duration-300">{link.name}</span>
                   </a>
@@ -195,7 +195,7 @@ export default function AsianGroceryFooter() {
               </h4>
               <div className="space-y-3">
                 {t.productLinksItems.map((link: QuickLinkItem, index: number) => (
-                  <a key={index} href={link.href} className="text-gray-300 hover:text-red-500 transition-all duration-300 flex items-center gap-3 group text-sm" >
+                  <a key={index} href={link.href} className="text-black-300 hover:text-red-500 transition-all duration-300 flex items-center gap-3 group text-sm" >
                     <span className="w-1.5 h-1.5 bg-red-500 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
                     <span className="group-hover:translate-x-1 transition-transform duration-300">{link.name}</span>
                   </a>
@@ -209,15 +209,15 @@ export default function AsianGroceryFooter() {
                 {t.contactUs}
               </h4>
               <div className="space-y-4">
-                 <div className="flex items-start gap-3 text-gray-300">
+                 <div className="flex items-start gap-3 text-black-300">
                   <MapPin size={18} className="text-red-500 flex-shrink-0 mt-1" />
                   <a href="#" className="text-sm leading-relaxed hover:text-red-500 transition-colors">{t.address}</a>
                 </div>
-                 <div className="flex items-center gap-3 text-gray-300">
+                 <div className="flex items-center gap-3 text-black-300">
                   <Phone size={18} className="text-red-500 flex-shrink-0" />
                   <a href={`tel:${t.phone.replace(/\s/g, '')}`} className="text-sm hover:text-red-500 transition-colors">{t.phone}</a>
                 </div>
-                 <div className="flex items-center gap-3 text-gray-300">
+                 <div className="flex items-center gap-3 text-black-300">
                   <Mail size={18} className="text-red-500 flex-shrink-0" />
                   <a href={`mailto:${t.email}`} className="text-sm hover:text-red-500 transition-colors">{t.email}</a>
                 </div>
@@ -228,10 +228,10 @@ export default function AsianGroceryFooter() {
 
           <div className="border-t border-gray-700 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-gray-400 text-sm text-center md:text-left">
-                © {new Date().getFullYear()} Asian Grocery. {t.copyright}
+              <p className="text-black-400 text-sm text-center md:text-left">
+                © {new Date().getFullYear()} INDOASIAFOOD. {t.copyright}
               </p>
-              <div className="flex items-center gap-4 text-sm text-gray-400">
+              <div className="flex items-center gap-4 text-sm text-black-400">
                 <a href="/privacy" className="hover:text-red-500 transition-colors">Privacy Policy</a>
                 <span>•</span>
                 <a href="/terms" className="hover:text-red-500 transition-colors">Terms of Service</a>
