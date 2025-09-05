@@ -122,4 +122,115 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Soft Dark Theme for Content Areas Only */
+  .content-dark-theme {
+    background: linear-gradient(135deg, 
+      #1A1A1A 0%, 
+      #21212B 25%, 
+      #1A1A1A 50%, 
+      #21212B 75%, 
+      #1A1A1A 100%);
+    position: relative;
+  }
+  
+  .content-dark-theme::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(139, 0, 0, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(178, 34, 34, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(139, 0, 0, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .content-dark-theme > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Enhanced text styling for dark content areas */
+  .content-dark-theme h1,
+  .content-dark-theme h2,
+  .content-dark-theme h3,
+  .content-dark-theme h4,
+  .content-dark-theme h5,
+  .content-dark-theme h6 {
+    color: #F0F0F0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .content-dark-theme p,
+  .content-dark-theme span,
+  .content-dark-theme div:not(.btn-container) {
+    color: #D0D0D0;
+  }
+  
+  .content-dark-theme .text-muted {
+    color: #A0A0A0;
+  }
+  
+  /* Button styling for dark content areas */
+  .content-dark-theme .btn-primary {
+    background: linear-gradient(135deg, #8B0000 0%, #B22222 100%);
+    color: #FFFFFF;
+    border: 1px solid rgba(139, 0, 0, 0.3);
+    box-shadow: 0 4px 14px 0 rgba(139, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .content-dark-theme .btn-primary:hover {
+    background: linear-gradient(135deg, #A00000 0%, #C22222 100%);
+    box-shadow: 0 6px 20px 0 rgba(139, 0, 0, 0.4);
+    transform: translateY(-1px);
+  }
+  
+  .content-dark-theme .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #F0F0F0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .content-dark-theme .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+  }
+  
+  /* Card styling for dark content areas */
+  .content-dark-theme .card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Special styling for Visi Misi and Sertifikasi sections */
+  .content-dark-theme .visi-misi-section,
+  .content-dark-theme .sertifikasi-section {
+    background: rgba(139, 0, 0, 0.1);
+    border: 1px solid rgba(139, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .content-dark-theme .visi-misi-section h2,
+  .content-dark-theme .sertifikasi-section h2 {
+    color: #FF6B6B;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .content-dark-theme .visi-misi-section p,
+  .content-dark-theme .sertifikasi-section p {
+    color: #E0E0E0;
+    line-height: 1.6;
+  }
 }

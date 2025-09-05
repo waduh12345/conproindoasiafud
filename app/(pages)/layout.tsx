@@ -28,11 +28,11 @@ const WhatsAppFloat = () => {
       >
         {/* Text "Let's Connect" */}
         <div
-          className={`bg-white rounded-full px-4 py-2 shadow-lg border border-green-100 transition-all duration-300 ${
+          className={`card rounded-full px-4 py-2 shadow-lg border border-green-100 transition-all duration-300 ${
             isHovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
           }`}
         >
-          <span className="text-gray-800 font-medium text-sm whitespace-nowrap">
+          <span className="text-white font-medium text-sm whitespace-nowrap">
             {` Let's Connect`}
           </span>
         </div>
@@ -72,11 +72,11 @@ export default function PagesLayout({
   children: React.ReactNode;
 }) {  
   return (
-    <div className="w-full bg-white">
+    <div className="w-full">
       <header className="sticky top-0 z-50">
         <TopHeader />
       </header>
-      <main>{children}</main>
+      <main className="content-dark-theme min-h-screen">{children}</main>
     
       <ScrollToTopButton />
       

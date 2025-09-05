@@ -450,148 +450,8 @@ interface FAQItem {
   category: string;
 }
 
-// Sample advantages data
-const advantages: Advantage[] = [
-  {
-    id: 1,
-    title: "Asian Grocery Terlengkap",
-    subtitle: "One-Stop Shopping Experience",
-    description: "Menyediakan lebih dari 2000+ produk Asia authentic dari Indonesia, Thailand, Korea, Jepang, dan Vietnam. Dari bumbu dapur hingga snack favorit, semua tersedia di satu tempat.",
-    icon: "🏪",
-    color: "red",
-    features: [
-      "Bumbu dapur Asia (Indonesia, Thailand, Vietnam, Korea, Jepang)",
-      "Produk instan & kebutuhan pokok (mie instan, saus, kecap, sambal)",
-      "Snack Asia populer dan jajanan khas Indonesia",
-    ],
-    stats: {
-      number: "2000+",
-      label: "Asian Products"
-    },
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600"
-  },
-  {
-    id: 2,
-    title: "Indonesian Food",
-    subtitle: "Obat kangen masakan emak !!!",
-    description: "Nikmati kelezatan masakan Nusantara yang autentik di Polandia. Dari rendang yang kaya rempah, mie instan favorit, hingga cendol yang memanjakan lidah— semua dihadirkan dengan autentik seperti di tanah air. Restoran kami bukan sekadar makanan, tapi juga menghadirkan kembali kenangan dan kehangatan rumah.",
-    icon: "🇮🇩",
-    color: "red",
-    features: [
-      "Restoran khas Indonesia di Mława, Polandia",
-      "Makanan beku & hidangan siap saji Nusantara yang praktis",
-      "Layanan katering untuk komunitas, perusahaan, hingga acara budaya",
-    ],
-    stats: {
-      number: "500+",
-      label: "Indonesian Products"
-    },
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600"
-  },
-  {
-    id: 3,
-    title: "Distribusi & Pemasaran",
-    subtitle: "Best Value for Money Guarantee",
-    description: "Komitmen memberikan harga terbaik tanpa mengorbankan kualitas. Sistem supply chain efisien memungkinkan kami menawarkan harga competitive untuk produk premium.",
-    icon: "💰",
-    color: "green",
-    features: [
-      "Supplier untuk toko Asia & supermarket lokal di Polandia",
-      "Penjualan retail & online",
-      "Promosi produk melalui festival kuliner & event komunitas",
-    ],
-    stats: {
-      number: "25%",
-      label: "Average Savings"
-    },
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600"
-  },
-];
-
-// Sample testimonials data
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: "Sari Wijaya",
-    role: "Community Leader",
-    company: "Komunitas Indonesia Warszawa",
-    content: "Asian Grocery adalah lifesaver bagi kami yang rindu makanan Indonesia. Produknya authentic dan harga sangat reasonable. Tim mereka juga selalu support event komunitas kami.",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b67d6b99?w=150",
-    rating: 5.0,
-    category: "Community"
-  },
-  {
-    id: 2,
-    name: "Anna Kowalski",
-    role: "Food Blogger",
-    company: "Warsaw Food Scene",
-    content: "Jako miłośniczka kuchni azjatyckiej, Asian Grocery to moje ulubione miejsce. Ogromny wybór autentycznych produktów i bardzo pomocna obsługa. Highly recommended!",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150",
-    rating: 4.9,
-    category: "Local Customer"
-  },
-  {
-    id: 3,
-    name: "Chef Budi Santoso",
-    role: "Executive Chef",
-    company: "Nusantara Restaurant",
-    content: "Sebagai chef restaurant Indonesia, saya sangat bergantung pada Asian Grocery untuk supply bahan-bahan berkualitas. Mereka selalu konsisten dan delivery tepat waktu.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150",
-    rating: 5.0,
-    category: "Business Partner"
-  },
-  {
-    id: 4,
-    name: "Maria Santos",
-    role: "Expat",
-    company: "Filipino Community",
-    content: "Living in Poland as a Filipino, finding Asian ingredients was challenging until I found Asian Grocery. They have everything I need for authentic Filipino cooking!",
-    avatar: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=150",
-    rating: 4.8,
-    category: "Community"
-  }
-];
-
-// Sample FAQ data
-const faqItems: FAQItem[] = [
-  {
-    id: 1,
-    question: "Apa yang membuat Asian Grocery berbeda dari toko Asia lainnya?",
-    answer: "Kami memiliki fokus khusus pada kualitas dan authenticity, terutama untuk produk Indonesia. Dengan 2000+ produk, community engagement yang kuat, dan misi cultural bridge, kami bukan hanya toko biasa tapi ecosystem lengkap untuk komunitas Asia di Polandia.",
-    category: "Keunggulan"
-  },
-  {
-    id: 2,
-    question: "Bagaimana cara memastikan produk Indonesia yang dijual authentic?",
-    answer: "Kami import langsung dari distributor resmi di Indonesia dan memiliki quality control team yang ketat. Setiap produk melewati tasting test dan approval dari Indonesian community leaders sebelum dijual. Garansi authentic atau uang kembali.",
-    category: "Kualitas"
-  },
-  {
-    id: 3,
-    question: "Apakah harga di Asian Grocery competitive dibanding supermarket besar?",
-    answer: "Ya, kami memiliki price match guarantee dan rata-rata 25% lebih murah dari kompetitor untuk produk yang sama. Dengan member program, customer bisa dapat additional discount hingga 15%. Volume purchase juga dapat harga grosir.",
-    category: "Harga"
-  },
-  {
-    id: 4,
-    question: "Bagaimana cara bergabung dengan komunitas Asian Grocery?",
-    answer: "Sangat mudah! Daftar menjadi member gratis di toko atau online, join Facebook group kami dengan 5000+ members, ikuti Instagram untuk update event, dan attend community gathering yang rutin diadakan setiap bulan.",
-    category: "Komunitas"
-  },
-  {
-    id: 5,
-    question: "Apakah Asian Grocery juga melayani wholesale/grosir?",
-    answer: "Absolutely! Kami adalah supplier utama untuk 50+ restaurant dan toko Asia di Polandia. Minimum order 1000 PLN dengan special wholesale pricing, credit terms, dan dedicated account manager untuk business customers.",
-    category: "Bisnis"
-  }
-];
 
 export default function AdvantagesPage() {
-  const [activeAdvantage, setActiveAdvantage] = useState<number | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
   const [language, setLanguage] = useState<Language>('id');
 
@@ -602,13 +462,6 @@ export default function AdvantagesPage() {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const testimonialTimer = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-
-    return () => clearInterval(testimonialTimer);
-  }, []);
 
   // Sync language from storage and header events
   useEffect(() => {
@@ -625,50 +478,6 @@ export default function AdvantagesPage() {
     return () => window.removeEventListener('languageChanged', onLanguageChanged as EventListener);
   }, []);
 
-  // Localized data
-  const advantages: Advantage[] = t.advantages.map((a, idx) => ({
-    id: idx + 1,
-    title: a.title,
-    subtitle: a.subtitle,
-    description: a.description,
-    icon: a.icon,
-    color: a.color,
-    features: [...a.features],
-    stats: { number: a.number, label: a.statsLabel },
-    image: a.image,
-  }));
-
-  const testimonials: Testimonial[] = t.testimonials.map((s, idx) => ({
-    id: idx + 1,
-    name: s.name,
-    role: s.role,
-    company: s.company,
-    content: s.content,
-    avatar: [
-      'https://images.unsplash.com/photo-1494790108755-2616b67d6b99?w=150',
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150',
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150',
-      'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=150',
-    ][idx % 4],
-    rating: s.rating,
-    category: s.category,
-  }));
-
-  const faqItems: FAQItem[] = t.faqs.map((f, idx) => ({
-    id: idx + 1,
-    question: f.question,
-    answer: f.answer,
-    category: f.category,
-  }));
-
-  const faqCategories = t.faqCategories;
-
-  const filteredFAQs = faqItems.filter(faq => {
-    const matchSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                       faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchCategory = selectedCategory === 'all' || faq.category === selectedCategory;
-    return matchSearch && matchCategory;
-  });
 
   const getColorClasses = (color: string) => {
     const colors: Record<string, string> = {
@@ -681,97 +490,83 @@ export default function AdvantagesPage() {
   };
 
   return (
-    <section className="min-h-screen py-16 px-6 md:px-12 bg-gradient-to-b from-red-50 to-white relative overflow-hidden">
+    <section className="min-h-screen py-16 px-6 md:px-12 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-600/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-red-500/10 to-transparent rounded-full blur-2xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-500/20 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-red-600/20 to-transparent rounded-full blur-2xl"></div>
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 animate-pulse invisible md:visible">
-        <div className="w-20 h-20 bg-gradient-to-r from-red-600/20 to-red-500/20 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
-          <Crown className="text-red-600" size={24} />
+        <div className="w-20 h-20 bg-gradient-to-r from-red-500/30 to-red-600/30 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
+          <Crown className="text-white" size={24} />
         </div>
       </div>
 
       <div className="container mx-auto relative z-10">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             {t.headerTitle1}
-            <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent">
               {" "}{t.headerTitle2}
             </span>
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             {t.headerSubtitle}
           </p>
-          <div className="flex items-center justify-center gap-2 mt-4 text-red-600">
+          <div className="flex items-center justify-center gap-2 mt-4 text-red-400">
             <Award size={20} />
             <span className="font-medium">{t.location}</span>
           </div>
         </div>
 
-        {/* Main Advantages */}
-        <div className="space-y-16 mb-20">
-          {advantages.map((advantage, idx) => (
-            <div 
-              key={advantage.id}
-              className={`transition-all duration-1000 ease-out ${
-                isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
-              }`}
-              style={{ transitionDelay: `${400 + idx * 200}ms` }}
-            >
-              <div className={`bg-gradient-to-r ${getColorClasses(advantage.color)} rounded-3xl p-1 shadow-2xl`}>
-                <div className="bg-white rounded-3xl p-8 md:p-12">
-                  <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-                    <div className={`${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="text-5xl">{advantage.icon}</div>
-                        <div>
-                          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                            {advantage.title}
-                          </h2>
-                          <p className="text-red-600 font-semibold text-lg">{advantage.subtitle}</p>
-                        </div>
-                      </div>
+        {/* Brand Logos Section */}
+        <div className="mb-20">
+          <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              {language === 'id' ? 'Brand Terpercaya' : language === 'en' ? 'Trusted Brands' : 'Zaufane Marki'}
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              {language === 'id' 
+                ? 'Produk berkualitas dari brand-brand terkemuka Asia yang telah dipercaya jutaan konsumen di seluruh dunia' 
+                : language === 'en' 
+                ? 'Quality products from leading Asian brands trusted by millions of consumers worldwide'
+                : 'Produkty wysokiej jakości od wiodących marek azjatyckich zaufanych przez miliony konsumentów na całym świecie'
+              }
+            </p>
+          </div>
 
-                      <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                        {advantage.description}
-                      </p>
-
-                      <div className="space-y-3 mb-8">
-                        {advantage.features.map((feature, featureIdx) => (
-                          <div key={featureIdx} className="flex items-start gap-3">
-                            <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                            <p className="text-gray-700">{feature}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className={`${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
-                      <div className="relative">
-                        <img 
-                          src={advantage.image}
-                          alt={advantage.title}
-                          className="w-full h-80 object-cover rounded-2xl shadow-lg"
-                        />
-                        <div className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-lg">
-                          <div className="text-center">
-                            <div className={`text-2xl font-bold bg-gradient-to-r ${getColorClasses(advantage.color)} bg-clip-text text-transparent`}>
-                              {advantage.stats.number}
-                            </div>
-                            <div className="text-gray-600 text-xs font-medium">{advantage.stats.label}</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+          <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 md:gap-12 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`} style={{ transitionDelay: '200ms' }}>
+            {[
+              { name: 'Indofood', image: '/images/product-services/indofood.jpeg' },
+              { name: 'Indomie', image: '/images/product-services/indomie.jpeg' },
+              { name: 'Bamboe', image: '/images/product-services/bamboe.jpeg' },
+              { name: 'Aroy-D', image: '/images/product-services/aroy.jpeg' },
+              { name: 'TRS', image: '/images/product-services/trs.jpeg' },
+              { name: 'Long Life', image: '/images/product-services/llb.jpeg' },
+              { name: 'ABC', image: '/images/product-services/abc.jpeg' },
+              { name: 'Cock Brand', image: '/images/product-services/cock.jpeg' },
+            ].map((brand, idx) => (
+              <div 
+                key={brand.name}
+                className="group cursor-pointer"
+                style={{ animationDelay: `${idx * 150}ms` }}
+              >
+                <div className="card rounded-3xl p-8 md:p-10 h-48 md:h-56 flex items-center justify-center md:hover:shadow-2xl md:hover:shadow-red-500/30 transition-all duration-500 md:hover:-translate-y-3 md:group-hover:scale-105 border-2 border-transparent md:group-hover:border-red-400/20">
+                  <img 
+                    src={brand.image}
+                    alt={brand.name}
+                    className="max-h-20 md:max-h-24 max-w-full object-contain filter  md:group-hover:grayscale-0 transition-all duration-500"
+                  />
                 </div>
+                <p className="text-center text-gray-300 md:text-gray-400 text-base md:text-lg mt-4 md:group-hover:text-white transition-colors duration-300 font-medium">
+                  {brand.name}
+                </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
 
         {/* Call to Action */}
         <div className="text-center">

@@ -512,10 +512,10 @@ export default function AdvantagesPage() {
   };
 
   return (
-    <section className="min-h-screen py-16 px-6 md:px-12 bg-gradient-to-b from-red-50 to-white relative overflow-hidden">
+    <section className="min-h-screen py-16 px-6 md:px-12 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-600/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-red-500/10 to-transparent rounded-full blur-2xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-500/20 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-red-600/20 to-transparent rounded-full blur-2xl"></div>
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 animate-pulse invisible md:visible">
@@ -527,7 +527,7 @@ export default function AdvantagesPage() {
       <div className="container mx-auto relative z-10">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             {t.headerTitle1}
             <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
               {" "}{t.headerTitle2}
@@ -545,10 +545,10 @@ export default function AdvantagesPage() {
         {/* Key Stats */}
         <div className={`grid grid-cols-2 md:grid-cols-5 gap-6 mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`} style={{ transitionDelay: '200ms' }}>
           {advantages.map((advantage, idx) => (
-            <div key={advantage.id} className="text-center bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div key={advantage.id} className="text-center card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-2">{advantage.icon}</div>
-              <div className="text-2xl font-bold text-red-600 mb-1">{advantage.stats.number}</div>
-              <div className="text-gray-700 font-medium text-sm">{advantage.stats.label}</div>
+              <div className="text-2xl font-bold text-red-400 mb-1">{advantage.stats.number}</div>
+              <div className="text-gray-300 font-medium text-sm">{advantage.stats.label}</div>
             </div>
           ))}
         </div>
@@ -564,13 +564,13 @@ export default function AdvantagesPage() {
               style={{ transitionDelay: `${400 + idx * 200}ms` }}
             >
               <div className={`bg-gradient-to-r ${getColorClasses(advantage.color)} rounded-3xl p-1 shadow-2xl`}>
-                <div className="bg-white rounded-3xl p-8 md:p-12">
+                <div className="card rounded-3xl p-8 md:p-12">
                   <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                     <div className={`${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
                       <div className="flex items-center gap-4 mb-6">
                         <div className="text-5xl">{advantage.icon}</div>
                         <div>
-                          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
                             {advantage.title}
                           </h2>
                           <p className="text-red-600 font-semibold text-lg">{advantage.subtitle}</p>
@@ -606,12 +606,12 @@ export default function AdvantagesPage() {
                           alt={advantage.title}
                           className="w-full h-80 object-cover rounded-2xl shadow-lg"
                         />
-                        <div className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-lg">
+                        <div className="absolute -top-4 -right-4 card rounded-full p-4 shadow-lg">
                           <div className="text-center">
                             <div className={`text-2xl font-bold bg-gradient-to-r ${getColorClasses(advantage.color)} bg-clip-text text-transparent`}>
                               {advantage.stats.number}
                             </div>
-                            <div className="text-gray-600 text-xs font-medium">{advantage.stats.label}</div>
+                            <div className="text-gray-300 text-xs font-medium">{advantage.stats.label}</div>
                           </div>
                         </div>
                       </div>

@@ -7,6 +7,7 @@ import {
   ChevronRight, CheckCircle, Globe, ShoppingCart,
   Package,
 } from 'lucide-react';
+// Remove the import since we'll use a string path
 
 // Language type
 type Language = 'id' | 'en' | 'pl';
@@ -312,15 +313,15 @@ export default function AboutUsPage() {
   ];
 
   return (
-    <section className="min-h-screen py-16 px-6 md:px-12 bg-black/70 from-red-50 to-white relative overflow-hidden">
+    <section className="min-h-screen py-16 px-6 md:px-12 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-200/20 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-red-300/20 to-transparent rounded-full blur-2xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-500/20 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-red-600/20 to-transparent rounded-full blur-2xl"></div>
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 animate-pulse invisible md:visible">
-        <div className="w-20 h-20 bg-gradient-to-r from-red-100/40 to-red-200/40 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
-          <ShoppingCart className="text-red-600" size={24} />
+        <div className="w-20 h-20 bg-gradient-to-r from-red-500/30 to-red-600/30 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
+          <ShoppingCart className="text-white" size={24} />
         </div>
       </div>
 
@@ -332,21 +333,21 @@ export default function AboutUsPage() {
             {t.connectingText}
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-300 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             {t.aboutUs.split(' ')[0]}
-            <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
               {" " + t.aboutUs.split(' ').slice(1).join(' ')}
             </span>
           </h1>
 
-          <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
             {t.heroDescription}
           </p>
         </div>
 
         {/* Navigation Tabs */}
         <div className={`flex justify-center mb-12 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`} style={{ transitionDelay: '200ms' }}>
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-2 shadow-xl border border-gray-100">
+          <div className="card rounded-2xl p-2 shadow-xl">
             <div className="flex gap-2 flex-wrap justify-center">
               {sections.map((section) => (
                 <button
@@ -355,7 +356,7 @@ export default function AboutUsPage() {
                   className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     activeSection === section.id
                       ? 'bg-red-600 text-white shadow-lg'
-                      : 'text-gray-600 hover:text-red-600 hover:bg-red-50'
+                      : 'text-gray-300 hover:text-red-400 hover:bg-red-500/10'
                   }`}
                 >
                   <section.icon size={18} />
@@ -369,12 +370,12 @@ export default function AboutUsPage() {
         {/* Achievement Stats */}
         <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`} style={{ transitionDelay: '400ms' }}>
           {achievements.map((stat, idx) => (
-            <div key={idx} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+            <div key={idx} className="card rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-red-600 text-white rounded-full mb-3">
                 <stat.icon size={20} />
               </div>
-              <div className="text-2xl font-bold text-red-600 mb-1">{stat.number}</div>
-              <div className="text-black text-sm">{stat.label}</div>
+              <div className="text-2xl font-bold text-red-400 mb-1">{stat.number}</div>
+              <div className="text-gray-300 text-sm">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -386,8 +387,8 @@ export default function AboutUsPage() {
             <div className={`transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`} style={{ transitionDelay: '600ms' }}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
                 <div className="order-2 lg:order-1">
-                  <h2 className="text-3xl font-bold text-gray-300 mb-6">{t.companyTitle}</h2>
-                  <div className="space-y-4 text-gray-300">
+                  <h2 className="text-3xl font-bold text-white mb-6">{t.companyTitle}</h2>
+                  <div className="space-y-4 text-gray-200">
                     <p>{t.companyDesc1}</p>
                     <p>{t.companyDesc2}</p>
                     <p>{t.companyDesc3}</p>
@@ -396,18 +397,18 @@ export default function AboutUsPage() {
                 
                 <div className="order-1 lg:order-2 relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600"
+                    src="/images/about-us/about-us.jpeg"
                     alt="Asian Grocery Store"
-                    className="w-full md:h-140 rounded-2xl shadow-2xl"
+                    className="w-full md:h-140 object-cover rounded-2xl shadow-2xl"
                   />
-                  <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl">
+                  <div className="absolute -bottom-6 -left-6 card p-6 rounded-xl shadow-xl">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
                         <Package className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="font-bold text-black">500+</div>
-                        <div className="text-sm text-black">{t.asianProducts}</div>
+                        <div className="font-bold text-white">500+</div>
+                        <div className="text-sm text-gray-300">{t.asianProducts}</div>
                       </div>
                     </div>
                   </div>
@@ -416,12 +417,12 @@ export default function AboutUsPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {companyValues.map((value, idx) => (
-                  <div key={idx} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div className="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mb-4">
-                      <value.icon className="w-6 h-6 text-red-600" />
+                  <div key={idx} className="card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div className="w-12 h-12 bg-red-500/20 rounded-full flex items-center justify-center mb-4">
+                      <value.icon className="w-6 h-6 text-red-400" />
                     </div>
-                    <h3 className="text-xl font-bold text-black mb-2">{value.title}</h3>
-                    <p className="text-black">{value.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
+                    <p className="text-gray-300">{value.description}</p>
                   </div>
                 ))}
               </div>
@@ -432,26 +433,26 @@ export default function AboutUsPage() {
           {activeSection === 'vision' && (
             <div className={`transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`} style={{ transitionDelay: '600ms' }}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+                <div className="visi-misi-section">
                   <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-red-50 rounded-full mb-4">
-                      <Eye className="w-8 h-8 text-red-600" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-4">
+                      <Eye className="w-8 h-8 text-red-400" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-300">{t.visionTitle}</h3>
+                    <h3 className="text-2xl font-bold">{t.visionTitle}</h3>
                   </div>
                   <div className="rounded-2xl p-6">
-                    <p className="text-lg text-black text-center leading-relaxed">
+                    <p className="text-lg text-center leading-relaxed">
                       {t.visionText}
                     </p>
                   </div>
                 </div>
                 
-                <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+                <div className="visi-misi-section">
                   <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-red-50 rounded-full mb-4">
-                      <Target className="w-8 h-8 text-red-600" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-4">
+                      <Target className="w-8 h-8 text-red-400" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-300">{t.missionTitle}</h3>
+                    <h3 className="text-2xl font-bold">{t.missionTitle}</h3>
                   </div>
                   <div className="space-y-4">
                     {[t.mission1, t.mission2, t.mission3, t.mission4].map((mission, idx) => (
@@ -459,7 +460,7 @@ export default function AboutUsPage() {
                         <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                           <CheckCircle className="w-4 h-4 text-white" />
                         </div>
-                        <p className="text-black">{mission}</p>
+                        <p>{mission}</p>
                       </div>
                     ))}
                   </div>
@@ -472,44 +473,44 @@ export default function AboutUsPage() {
           {activeSection === 'legal' && (
             <div className={`transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`} style={{ transitionDelay: '600ms' }}>
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-300 mb-4">{t.certTitle}</h2>
-                <p className="text-black text-lg max-w-2xl mx-auto">
+                <h2 className="text-3xl font-bold text-white mb-4">{t.certTitle}</h2>
+                <p className="text-gray-200 text-lg max-w-2xl mx-auto">
                   {t.certDesc}
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 {certifications.map((cert, idx) => (
-                  <div key={idx} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 text-center">
+                  <div key={idx} className="card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 text-center">
                     <div className={`inline-flex items-center justify-center w-16 h-16 ${cert.color} rounded-full mb-4`}>
                       <cert.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-300 mb-2">{cert.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">{cert.title}</h3>
                   </div>
                 ))}
               </div>
 
-              <div className="bg-gradient-to-r from-red-50 to-white rounded-3xl p-8">
+              <div className="sertifikasi-section">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="text-xl font-bold text-gray-300 mb-4">{t.legalDocs}</h4>
+                    <h4 className="text-xl font-bold mb-4">{t.legalDocs}</h4>
                     <div className="space-y-3">
                       {["Business Registration Poland", "VAT", "Import License untuk Produk Asia", "Food Safety Certificate"].map((doc, idx) => (
                         <div key={idx} className="flex items-center gap-3">
-                          <CheckCircle className="w-5 h-5 text-red-600" />
-                          <span className="text-gray-300">{doc}</span>
+                          <CheckCircle className="w-5 h-5 text-red-400" />
+                          <span>{doc}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                   
                   <div>
-                    <h4 className="text-xl font-bold text-gray-300 mb-4">{t.partnerships}</h4>
+                    <h4 className="text-xl font-bold mb-4">{t.partnerships}</h4>
                     <div className="space-y-3">
                       {["Supplier Resmi Produk Indonesia", "Partner Asian Food Distributors", "Member Polish Business Association", "Halal Certification Partner"].map((cert, idx) => (
                         <div key={idx} className="flex items-center gap-3">
-                          <CheckCircle className="w-5 h-5 text-red-600" />
-                          <span className="text-gray-300">{cert}</span>
+                          <CheckCircle className="w-5 h-5 text-red-400" />
+                          <span>{cert}</span>
                         </div>
                       ))}
                     </div>
@@ -528,7 +529,7 @@ export default function AboutUsPage() {
             {t.ctaDesc}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="tel:+48123456789" className="bg-white text-gray-300 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-xl">
+            <a href="tel:+48123456789" className="bg-white text-red-600 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-xl">
               <Phone size={20} />
               {t.callNow}
             </a>

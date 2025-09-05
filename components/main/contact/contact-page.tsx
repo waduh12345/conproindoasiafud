@@ -450,7 +450,7 @@ export default function AsianGroceryContactPage() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-red-50 to-white relative overflow-hidden">
+    <div className="relative overflow-hidden">
       {/* Floating Elements Container */}
       <div
         className={clsx(
@@ -459,26 +459,26 @@ export default function AsianGroceryContactPage() {
         )}
       >
         <div className="absolute top-20 left-10 animate-float-slow">
-          <div className="w-24 h-24 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
-            <ShoppingCart className="text-red-600 animate-pulse" size={28} />
+          <div className="w-24 h-24 bg-gradient-to-r from-red-500/30 to-red-600/30 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
+            <ShoppingCart className="text-white animate-pulse" size={28} />
           </div>
         </div>
         <div className="absolute top-40 right-16 animate-float-delayed">
-          <div className="w-20 h-20 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
-            <Coffee className="text-red-600 animate-spin-slow" size={24} />
+          <div className="w-20 h-20 bg-gradient-to-r from-red-500/30 to-red-600/30 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
+            <Coffee className="text-white animate-spin-slow" size={24} />
           </div>
         </div>
         <div className="absolute bottom-40 left-20 animate-bounce-gentle">
-          <div className="w-16 h-16 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
-            <Package className="text-red-600 animate-twinkle" size={20} />
+          <div className="w-16 h-16 bg-gradient-to-r from-red-500/30 to-red-600/30 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
+            <Package className="text-white animate-twinkle" size={20} />
           </div>
         </div>
         <div className="absolute top-60 right-40 animate-pulse-gentle">
           <div className="w-32 h-32 bg-gradient-to-r from-red-500/15 to-red-600/15 rounded-full backdrop-blur-sm"></div>
         </div>
         <div className="absolute bottom-20 right-20 animate-float-up-down">
-          <div className="w-18 h-18 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
-            <Utensils className="text-red-600 animate-sway" size={22} />
+          <div className="w-18 h-18 bg-gradient-to-r from-red-500/30 to-red-600/30 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
+            <Utensils className="text-white animate-sway" size={22} />
           </div>
         </div>
       </div>
@@ -518,21 +518,21 @@ export default function AsianGroceryContactPage() {
 
             <h1
               className={clsx(
-                `text-4xl md:text-6xl font-extrabold text-gray-800 mb-6 leading-tight transform transition-all duration-1000 delay-300`,
+                `text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight transform transition-all duration-1000 delay-300`,
                 isVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-10 opacity-0"
               )}
             >
               {t.heroTitle}
-              <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent animate-gradient-shift">
+              <span className="bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent animate-gradient-shift">
                 {t.heroTitleHighlight}
               </span>
             </h1>
 
             <p
               className={clsx(
-                `text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto transform transition-all duration-1000 delay-500`,
+                `text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto transform transition-all duration-1000 delay-500`,
                 isVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-10 opacity-0"
@@ -545,10 +545,10 @@ export default function AsianGroceryContactPage() {
       </section>
 
       {/* WhatsApp CTA Section */}
-      <section className="py-16 bg-red-50 relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-20">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-100 transform hover:scale-105 transition-all duration-500 group">
+            <div className="card rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-500 group">
               <div className="mb-6">
                 <div className="w-24 h-24 bg-gradient-to-r from-red-600 to-red-500 rounded-full mx-auto flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-500 shadow-lg">
                   <MessageCircle
@@ -556,50 +556,50 @@ export default function AsianGroceryContactPage() {
                     size={40}
                   />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   {t.freeConsultation}
-                  <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent">
                     {t.whatsapp}
                   </span>
                 </h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-200 leading-relaxed">
                   {t.whatsappDescription}
                 </p>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white/50 rounded-2xl p-4 border border-red-600/30 shadow-sm">
+                <div className="bg-white/10 rounded-2xl p-4 border border-red-600/30 shadow-sm">
                   <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mb-3 mx-auto shadow-md">
                     <Clock className="text-white" size={20} />
                   </div>
-                  <h3 className="font-bold text-gray-800 mb-2">
+                  <h3 className="font-bold text-white mb-2">
                     {t.quickResponse}
                   </h3>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-sm text-gray-300">
                     {t.quickResponseDesc}
                   </p>
                 </div>
 
-                <div className="bg-white/50 rounded-2xl p-4 border border-red-600/30 shadow-sm">
+                <div className="bg-white/10 rounded-2xl p-4 border border-red-600/30 shadow-sm">
                   <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mb-3 mx-auto shadow-md">
                     <Store className="text-white" size={20} />
                   </div>
-                  <h3 className="font-bold text-gray-800 mb-2">
+                  <h3 className="font-bold text-white mb-2">
                     {t.productInfo}
                   </h3>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-sm text-gray-300">
                     {t.productInfoDesc}
                   </p>
                 </div>
 
-                <div className="bg-white/50 rounded-2xl p-4 border border-red-600/30 shadow-sm">
+                <div className="bg-white/10 rounded-2xl p-4 border border-red-600/30 shadow-sm">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-500 rounded-xl flex items-center justify-center mb-3 mx-auto shadow-md">
                     <Users className="text-white" size={20} />
                   </div>
-                  <h3 className="font-bold text-gray-800 mb-2">
+                  <h3 className="font-bold text-white mb-2">
                     {t.orderAssistance}
                   </h3>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-sm text-gray-300">
                     {t.orderAssistanceDesc}
                   </p>
                 </div>
@@ -619,20 +619,20 @@ export default function AsianGroceryContactPage() {
                 <div className="w-2 h-2 bg-white rounded-full animate-ping"></div>
               </a>
 
-              <p className="text-sm text-gray-600 mt-4">{t.promoText}</p>
+              <p className="text-sm text-gray-300 mt-4">{t.promoText}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Information & Form Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center shadow-md">
                     <Phone className="text-white" size={16} />
                   </div>
@@ -645,7 +645,7 @@ export default function AsianGroceryContactPage() {
                 {contactInfo.map((info: ContactInfoItem, index: number) => (
                   <div
                     key={index}
-                    className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:shadow-red-500/30 hover:scale-105 transition-all duration-500 group"
+                    className="card rounded-2xl p-6 hover:shadow-xl hover:shadow-red-500/30 hover:scale-105 transition-all duration-500 group"
                     style={{ animationDelay: `${index * 200}ms` }}
                   >
                     <div className="flex items-start gap-4">
@@ -653,13 +653,13 @@ export default function AsianGroceryContactPage() {
                         {info.icon}
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-bold text-gray-800 mb-1 group-hover:text-red-600 transition-colors duration-300">
+                        <h3 className="font-bold text-white mb-1 group-hover:text-red-400 transition-colors duration-300">
                           {info.title}
                         </h3>
-                        <p className="text-lg text-gray-800 font-medium mb-1">
+                        <p className="text-lg text-gray-200 font-medium mb-1">
                           {info.content}
                         </p>
-                        <p className="text-sm text-gray-700">
+                        <p className="text-sm text-gray-300">
                           {info.description}
                         </p>
                       </div>
@@ -669,9 +669,9 @@ export default function AsianGroceryContactPage() {
               </div>
 
               {/* Operating Hours */}
-              <div className="bg-red-50 rounded-2xl p-6 border border-red-600/30 shadow-md">
-                <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2 text-xl">
-                  <Clock className="text-red-600" size={24} />
+              <div className="card rounded-2xl p-6 border border-red-600/30">
+                <h3 className="font-bold text-white mb-4 flex items-center gap-2 text-xl">
+                  <Clock className="text-red-400" size={24} />
                   {t.operatingHours}
                 </h3>
                 <div className="space-y-3">
@@ -681,7 +681,7 @@ export default function AsianGroceryContactPage() {
                         key={index}
                         className="flex items-center justify-between"
                       >
-                        <span className="text-gray-700 font-medium">
+                        <span className="text-gray-300 font-medium">
                           {schedule.day}
                         </span>
                         <div className="flex items-center gap-2">
@@ -689,8 +689,8 @@ export default function AsianGroceryContactPage() {
                             className={clsx(
                               "font-medium",
                               schedule.isOpen
-                                ? "text-red-600"
-                                : "text-red-500"
+                                ? "text-red-400"
+                                : "text-red-300"
                             )}
                           >
                             {schedule.time}
@@ -699,8 +699,8 @@ export default function AsianGroceryContactPage() {
                             className={clsx(
                               "w-2 h-2 rounded-full",
                               schedule.isOpen
-                                ? "bg-red-600 animate-pulse"
-                                : "bg-red-500"
+                                ? "bg-red-400 animate-pulse"
+                                : "bg-red-300"
                             )}
                           ></div>
                         </div>
@@ -712,8 +712,8 @@ export default function AsianGroceryContactPage() {
 
               {/* Social Media */}
               <div>
-                <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2 text-xl">
-                  <Instagram className="text-red-600" size={24} />
+                <h3 className="font-bold text-white mb-4 flex items-center gap-2 text-xl">
+                  <Instagram className="text-red-400" size={24} />
                   {t.followUs}
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -746,28 +746,28 @@ export default function AsianGroceryContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-100 relative overflow-hidden">
+            <div className="card rounded-3xl p-8 relative overflow-hidden">
               {/* Form background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-l from-red-500/20 to-transparent rounded-full blur-2xl"></div>
 
               <div className="relative z-10">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center shadow-md">
                     <Mail className="text-white" size={16} />
                   </div>
                   {t.sendMessage}
                 </h2>
 
-                <p className="text-gray-700 mb-6">{t.formDescription}</p>
+                <p className="text-gray-200 mb-6">{t.formDescription}</p>
 
                 {isSubmitted && (
-                  <div className="bg-red-50 border border-red-600/30 rounded-2xl p-4 mb-6 flex items-center gap-3 animate-fade-in shadow-md">
-                    <CheckCircle className="text-red-600" size={24} />
+                  <div className="card border border-red-600/30 rounded-2xl p-4 mb-6 flex items-center gap-3 animate-fade-in">
+                    <CheckCircle className="text-red-400" size={24} />
                     <div>
-                      <h4 className="font-bold text-gray-800">
+                      <h4 className="font-bold text-white">
                         {t.messageSent}
                       </h4>
-                      <p className="text-gray-700 text-sm">{t.thankYou}</p>
+                      <p className="text-gray-300 text-sm">{t.thankYou}</p>
                     </div>
                   </div>
                 )}
@@ -775,7 +775,7 @@ export default function AsianGroceryContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="group">
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
                         {t.fullName} {t.required}
                       </label>
                       <input
@@ -784,13 +784,13 @@ export default function AsianGroceryContactPage() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-300 group-hover:border-red-600 shadow-sm"
+                        className="w-full px-4 py-3 bg-white/10 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300 group-hover:border-red-400 shadow-sm text-white placeholder-gray-400"
                         placeholder={t.fullNamePlaceholder}
                       />
                     </div>
 
                     <div className="group">
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
                         {t.email} {t.required}
                       </label>
                       <input
@@ -799,14 +799,14 @@ export default function AsianGroceryContactPage() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-300 group-hover:border-red-600 shadow-sm"
+                        className="w-full px-4 py-3 bg-white/10 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300 group-hover:border-red-400 shadow-sm text-white placeholder-gray-400"
                         placeholder={t.emailPlaceholder}
                       />
                     </div>
                   </div>
 
                   <div className="group">
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
                       {t.subject}
                     </label>
                     <input
@@ -814,13 +814,13 @@ export default function AsianGroceryContactPage() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-300 group-hover:border-red-600 shadow-sm"
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300 group-hover:border-red-400 shadow-sm text-white placeholder-gray-400"
                       placeholder={t.subjectPlaceholder}
                     />
                   </div>
 
                   <div className="group">
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
                       {t.message} {t.required}
                     </label>
                     <textarea
@@ -829,7 +829,7 @@ export default function AsianGroceryContactPage() {
                       onChange={handleInputChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-300 resize-none group-hover:border-red-600 shadow-sm"
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300 resize-none group-hover:border-red-400 shadow-sm text-white placeholder-gray-400"
                       placeholder={t.messagePlaceholder}
                     />
                   </div>
@@ -837,7 +837,7 @@ export default function AsianGroceryContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-red-600 text-white py-4 rounded-2xl hover:bg-red-700 hover:shadow-lg hover:shadow-red-500/40 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 text-lg font-bold disabled:opacity-70 disabled:cursor-not-allowed shadow-md"
+                    className="btn-primary w-full py-4 rounded-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 text-lg font-bold disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>

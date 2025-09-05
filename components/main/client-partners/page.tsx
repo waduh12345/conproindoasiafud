@@ -31,7 +31,7 @@ const translations = {
         statsLabel: 'Asian Products',
         icon: '🏪',
         color: 'red',
-        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600',
+        image: '/images/client-partners/loja.jpeg',
       },
       {
         title: 'Dapur Omah Mława',
@@ -40,69 +40,69 @@ const translations = {
         statsLabel: 'Indonesian Products',
         icon: '🇮🇩',
         color: 'red',
-        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600',
+        image: '/images/client-partners/omah.jpeg',
       },
     ],
   },
   en: {
-    headerTitle1: 'Our',
-    headerTitle2: 'Advantages',
+    headerTitle1: 'Clients',
+    headerTitle2: '& Partners',
     headerSubtitle: 'Five key advantages that make Asian Grocery the #1 choice for Asian culinary needs in Poland.',
     excellenceNote: 'Excellence in Asian Grocery Since 2019',
     learnMore: 'Learn More',
-    ctaTitle: 'Experience Our Advantages Today',
-    ctaDesc: 'Join thousands of customers who already enjoy the Asian Grocery experience',
+    ctaTitle: 'Experience Our Advantages Now',
+    ctaDesc: 'Join thousands of customers who have experienced the excellence of Asian Grocery experience',
     ctaShop: '🛒 Start Shopping Now',
     ctaContact: '📞 Contact Us',
     advantages: [
       {
-        title: 'Complete Asian Grocery',
-        description: 'We offer 2000+ authentic Asian products from Indonesia, Thailand, Korea, Japan, and Vietnam. From pantry spices to favorite snacks—all in one place.',
+        title: 'LOJANESIA',
+        description: 'LojaNesia Poland is a retail company focused on marketing and distributing Asian products in Poland. We bring various food ingredients, spices, snacks, beverages, and daily necessities that are authentic from various Asian countries, with special emphasis on Indonesian products. Our main goal is to be a bridge between Asian communities living in Poland and the authentic flavors from their homeland, while introducing the richness of Asian culinary and culture to local consumers. With commitment to quality, authenticity, and professional service, LojaNesia Poland is determined to become one of the trusted Asian product shopping centers in Poland.',
         statsNumber: '2000+',
         statsLabel: 'Asian Products',
         icon: '🏪',
         color: 'red',
-        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600',
+        image: '/images/client-partners/loja.jpeg',
       },
       {
-        title: 'Authentic Indonesian Food',
-        description: 'Specializing in authentic Indonesian food and spices. From instant rendang to traditional crackers, we preserve the same taste as in Indonesia.',
+        title: 'Dapur Omah Mława',
+        description: 'Dapur Omah Mława is a restaurant that brings authentic Indonesian cuisine flavors to the city of Mława, Poland. We serve various traditional Nusantara dishes rich in spices and flavors, from popular street food to authentic home cooking. With a concept that combines the warmth of Indonesian culture and the comfort of a modern atmosphere, Dapur Omah Mława is not only a place to eat, but also a meeting space for local communities and Indonesian diaspora to enjoy a different culinary experience. Our commitment is to provide the best service by maintaining the quality of raw materials, authenticity of taste, and bringing Indonesian nuances to every dish.',
         statsNumber: '500+',
         statsLabel: 'Indonesian Products',
         icon: '🇮🇩',
         color: 'red',
-        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600',
+        image: '/images/client-partners/omah.jpeg',
       },
     ],
   },
   pl: {
-    headerTitle1: 'Nasze',
-    headerTitle2: 'Atuty',
+    headerTitle1: 'Klienci',
+    headerTitle2: '& Partnerzy',
     headerSubtitle: 'Pięć kluczowych atutów, które sprawiają, że Asian Grocery to wybór nr 1 w Polsce.',
     excellenceNote: 'Doskonali w Asian Grocery od 2019',
     learnMore: 'Dowiedz się więcej',
-    ctaTitle: 'Poczuj Nasze Atuty Już Dziś',
-    ctaDesc: 'Dołącz do tysięcy klientów korzystających z doświadczenia Asian Grocery',
+    ctaTitle: 'Poczuj Nasze Atuty Już Teraz',
+    ctaDesc: 'Dołącz do tysięcy klientów, którzy doświadczyli doskonałości Asian Grocery',
     ctaShop: '🛒 Zacznij Zakupy Teraz',
     ctaContact: '📞 Skontaktuj się z Nami',
     advantages: [
       {
-        title: 'Kompletny Sklep Azjatycki',
-        description: 'Ponad 2000 autentycznych produktów z Indonezji, Tajlandii, Korei, Japonii i Wietnamu. Od przypraw po ulubione przekąski — wszystko w jednym miejscu.',
+        title: 'LOJANESIA',
+        description: 'LojaNesia Poland to firma detaliczna skupiona na marketingu i dystrybucji produktów azjatyckich w Polsce. Dostarczamy różnorodne składniki spożywcze, przyprawy, przekąski, napoje oraz artykuły codziennego użytku autentyczne z różnych krajów azjatyckich, ze szczególnym naciskiem na produkty indonezyjskie. Naszym głównym celem jest bycie mostem między społecznościami azjatyckimi mieszkającymi w Polsce a autentycznymi smakami z ich ojczyzny, jednocześnie wprowadzając bogactwo azjatyckiej kuchni i kultury do lokalnych konsumentów. Z zaangażowaniem w jakość, autentyczność i profesjonalną obsługę, LojaNesia Poland dąży do zostania jednym z zaufanych centrów zakupowych produktów azjatyckich w Polsce.',
         statsNumber: '2000+',
         statsLabel: 'Produkty Azjatyckie',
         icon: '🏪',
         color: 'red',
-        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600',
+        image: '/images/client-partners/loja.jpeg',
       },
       {
-        title: 'Autentyczna Kuchnia Indonezyjska',
-        description: 'Specjalizujemy się w autentycznych daniach i przyprawach indonezyjskich. Od instant rendang po tradycyjne krakersy — zachowujemy smak jak w Indonezji.',
+        title: 'Dapur Omah Mława',
+        description: 'Dapur Omah Mława to restauracja, która przywozi autentyczne smaki kuchni indonezyjskiej do miasta Mława w Polsce. Serwujemy różnorodne tradycyjne dania Nusantara bogate w przyprawy i smaki, od popularnych dań ulicznych po autentyczne domowe gotowanie. Z koncepcją łączącą ciepło kultury indonezyjskiej i komfort nowoczesnej atmosfery, Dapur Omah Mława to nie tylko miejsce do jedzenia, ale także przestrzeń spotkań dla lokalnych społeczności i indonezyjskiej diaspory, aby cieszyć się innym doświadczeniem kulinarnym. Naszym zaangażowaniem jest zapewnienie najlepszej obsługi poprzez utrzymanie jakości surowców, autentyczności smaku i wprowadzanie indonezyjskich niuansów do każdego dania.',
         statsNumber: '500+',
         statsLabel: 'Produkty Indonezyjskie',
         icon: '🇮🇩',
         color: 'red',
-        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600',
+        image: '/images/client-partners/omah.jpeg',
       },
     ],
   },
@@ -283,7 +283,7 @@ export default function AdvantagesPage() {
 
   const getColorClasses = (color: string) => {
     const colors: Record<string, string> = {
-      red: 'from-red-600 to-red-500',
+      red: 'from-red-800 to-red-700',
       green: 'from-green-600 to-green-500',
       blue: 'from-blue-600 to-blue-500',
       purple: 'from-purple-600 to-purple-500'
@@ -292,32 +292,32 @@ export default function AdvantagesPage() {
   };
 
   return (
-    <section className="min-h-screen py-16 px-6 md:px-12 bg-black/70 from-red-50 to-white relative overflow-hidden">
+    <section className="min-h-screen py-16 px-6 md:px-12 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-600/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-red-500/10 to-transparent rounded-full blur-2xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-500/20 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-red-600/20 to-transparent rounded-full blur-2xl"></div>
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 animate-pulse invisible md:visible">
-        <div className="w-20 h-20 bg-gradient-to-r from-red-600/20 to-red-500/20 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
-          <Crown className="text-red-600" size={24} />
+        <div className="w-20 h-20 bg-gradient-to-r from-red-500/30 to-red-600/30 rounded-full backdrop-blur-sm flex items-center justify-center shadow-md">
+          <Crown className="text-white" size={24} />
         </div>
       </div>
 
       <div className="container mx-auto relative z-10">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-300 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             {t.headerTitle1}
-            <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-300 to-red-400 bg-clip-text text-transparent">
               {" "}{t.headerTitle2}
             </span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             {t.headerSubtitle}
           </p>
-          <div className="flex items-center justify-center gap-2 mt-4 text-gray-300">
-            <Award size={20} />
+          <div className="flex items-center justify-center gap-2 mt-4 text-gray-200">
+            <Award size={20} className="text-red-300" />
             <span className="font-medium">{t.excellenceNote}</span>
           </div>
         </div>
@@ -333,36 +333,39 @@ export default function AdvantagesPage() {
               style={{ transitionDelay: `${400 + idx * 200}ms` }}
             >
               <div className={`bg-gradient-to-r ${getColorClasses(advantage.color)} rounded-3xl p-1 shadow-2xl`}>
-                <div className="bg-white rounded-3xl p-8 md:p-12">
+                <div className="card rounded-3xl p-8 md:p-12">
                   <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                     <div className={`${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
                       <div className="flex items-center gap-4 mb-6">
                         <div className="text-5xl">{advantage.icon}</div>
                         <div>
-                          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
                             {advantage.title}
                           </h2>
                         </div>
                       </div>
 
-                      <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                      <p className="text-gray-200 text-lg mb-6 leading-relaxed">
                         {advantage.description}
                       </p>
                     </div>
 
                     <div className={`${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
-                      <div className="relative">
-                        <img 
-                          src={advantage.image}
-                          alt={advantage.title}
-                          className="w-full h-80 object-cover rounded-2xl shadow-lg"
-                        />
-                        <div className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-lg">
+                      <div className="relative flex justify-center">
+                        <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm">
+                          <img 
+                            src={advantage.image}
+                            alt={advantage.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        </div>
+                        <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 card rounded-full p-3 sm:p-4 shadow-xl border-2 border-red-200/30 bg-red-200/30">
                           <div className="text-center">
-                            <div className={`text-2xl font-bold bg-gradient-to-r ${getColorClasses(advantage.color)} bg-clip-text text-transparent`}>
+                            <div className={`text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r ${getColorClasses(advantage.color)} bg-clip-text`}>
                               {advantage.stats.number}
                             </div>
-                            <div className="text-gray-600 text-xs font-medium">{advantage.stats.label}</div>
+                            <div className="text-gray-200 text-xs font-medium">{advantage.stats.label}</div>
                           </div>
                         </div>
                       </div>

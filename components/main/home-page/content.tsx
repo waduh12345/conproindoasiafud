@@ -348,9 +348,9 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden bg-black/90 from-red-50 via-white to-red-100">
+      <section className="relative min-h-screen overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-500/20 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-red-600/20 to-transparent rounded-full blur-2xl"></div>
@@ -378,23 +378,23 @@ export default function HomePage() {
                   <span className="text-sm font-semibold">{t.heroBadge}</span>
                 </div>
                 
-                <h1 className="text-4xl md:text-6xl font-extrabold text-gray-300 mb-6 leading-tight">
+                <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
                   {t.heroTitleLine1}
-                  <span className="block bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent">
                     {t.heroTitleLine2}
                   </span>
                 </h1>
                 
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                <p className="text-xl text-gray-200 mb-8 leading-relaxed">
                   {t.heroDescription}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 shadow-xl flex items-center justify-center">
+                  <button className="btn-primary px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 shadow-xl flex items-center justify-center">
                     {t.viewBestProducts}
                     <ChevronRight className="ml-2 w-5 h-5" />
                   </button>
-                  <button className="bg-white/80 backdrop-blur-sm hover:bg-white text-gray-800 border border-gray-200 px-8 py-4 rounded-full font-semibold transition-all flex items-center justify-center shadow-lg">
+                  <button className="btn-secondary px-8 py-4 rounded-full font-semibold transition-all flex items-center justify-center shadow-lg">
                     <Play className="mr-2 w-5 h-5" />
                     {t.viewRestaurant}
                   </button>
@@ -412,26 +412,26 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
                   
                   {/* Floating Stats */}
-                  <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl">
+                  <div className="absolute -bottom-6 -left-6 card p-6 rounded-2xl shadow-2xl">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
                         <Users className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-gray-800">2,500+</div>
-                        <div className="text-gray-600 text-sm">{t.satisfiedCustomers}</div>
+                        <div className="text-2xl font-bold text-white">2,500+</div>
+                        <div className="text-gray-300 text-sm">{t.satisfiedCustomers}</div>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-2xl">
+                  <div className="absolute -top-6 -right-6 card p-4 rounded-2xl shadow-2xl">
                     <div className="flex items-center gap-2">
                       <div className="flex">
                         {[...Array(5)].map((_, i) => (
                           <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                         ))}
                       </div>
-                      <span className="font-bold text-gray-800">4.8</span>
+                      <span className="font-bold text-white">4.8</span>
                     </div>
                   </div>
                 </div>
@@ -442,7 +442,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-6">
           <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
             {stats.map((stat, idx) => (
@@ -450,8 +450,8 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-600 text-white rounded-full mb-4 group-hover:bg-red-700 transition-all duration-300">
                   <stat.icon size={24} />
                 </div>
-                <div className="text-3xl font-bold text-gray-800 mb-2">{stat.number}</div>
-                <div className="text-gray-700">{stat.label}</div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -459,11 +459,11 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-black/80 from-red-50">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-            <h2 className="text-4xl font-bold text-gray-300 mb-4">{t.whyChooseHeading}</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-4">{t.whyChooseHeading}</h2>
+            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
               {t.whyChooseSubtitle}
             </p>
           </div>
@@ -472,7 +472,7 @@ export default function HomePage() {
             {whyChooseUs.map((reason, idx) => (
               <div 
                 key={idx} 
-                className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group ${
+                className={`card rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group ${
                   isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
                 }`}
                 style={{ transitionDelay: `${idx * 100}ms` }}
@@ -480,8 +480,8 @@ export default function HomePage() {
                 <div className={`w-16 h-16 ${reason.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <reason.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{reason.title}</h3>
-                <p className="text-gray-700">{reason.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{reason.title}</h3>
+                <p className="text-gray-300">{reason.description}</p>
               </div>
             ))}
           </div>
@@ -489,11 +489,11 @@ export default function HomePage() {
       </section>
 
       {/* Featured Products */}
-      <section className="py-20 bg-white">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">{t.featuredHeading}</h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-4">{t.featuredHeading}</h2>
+            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
               {t.featuredSubtitle}
             </p>
           </div>
@@ -502,7 +502,7 @@ export default function HomePage() {
             {featuredProducts.map((product, idx) => (
               <div 
                 key={product.id}
-                className={`bg-white rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer ${
+                className={`card rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer ${
                   isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
                 }`}
                 style={{ transitionDelay: `${idx * 100}ms` }}
@@ -528,7 +528,7 @@ export default function HomePage() {
                 
                 {/* Product Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-red-600 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors">
                     {product.name}
                   </h3>
                 </div>
@@ -589,22 +589,22 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-black/80 from-red-50">
+      <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <div className={`transition-all duration-1000 ease-out ${isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
             <h2 className="text-4xl font-bold text-white mb-6">
               {t.ctaHeading}
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
               {t.ctaSubtitle}
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="https://wa.me/48123456789" className="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-xl">
+              <a href="https://wa.me/48123456789" className="btn-primary px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-xl">
                 <Phone size={20} />
                 {t.ctaWhatsApp}
               </a>
-              <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full font-semibold transition-all flex items-center justify-center gap-2">
+              <button className="btn-secondary px-8 py-4 rounded-full font-semibold transition-all flex items-center justify-center gap-2">
                 <MapPin size={20} />
                 {t.ctaSeeLocation}
               </button>
