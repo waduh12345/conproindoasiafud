@@ -37,7 +37,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, menuItems }) => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Image
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="Logo"
                 width={32}
                 height={32}
