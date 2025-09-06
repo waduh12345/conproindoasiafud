@@ -58,8 +58,8 @@ const translations: Translations = {
     ],
     contactUs: "Kontakt",
     address: "Mława, Województwo mazowieckie, Polska",
-    phone: "+48 123 456 789",
-    email: "info@asiangrocery.pl",
+    phone: "+48 732 962 624",
+    email: "lojanesia.official@yahoo.com",
     copyright: "Wszelkie prawa zastrzeżone.",
   },
   en: {
@@ -83,8 +83,8 @@ const translations: Translations = {
     ],
     contactUs: "Contact",
     address: "Franciszka Żwirki 26D, 06-500 Mława, Polandia",
-    phone: "+48 123 456 789",
-    email: "info@asiangrocery.pl",
+    phone: "+48 732 962 624",
+    email: "lojanesia.official@yahoo.com",
     copyright: "All rights reserved.",
   },
 };

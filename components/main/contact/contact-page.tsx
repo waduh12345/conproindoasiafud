@@ -395,7 +395,7 @@ export default function AsianGroceryContactPage() {
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
-  const whatsappNumber = "48123456789"; // Asian Grocery WhatsApp number
+  const whatsappNumber = "48732962624"; // Asian Grocery WhatsApp number
   const whatsappMessage = t.whatsappMessage;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     whatsappMessage
@@ -411,13 +411,13 @@ export default function AsianGroceryContactPage() {
     {
       icon: <Phone className="text-red-600" size={24} />,
       title: t.phone,
-      content: "+48 123 456 789",
+      content: "+‪+48 732 962 624‬",
       description: t.phoneDesc,
     },
     {
       icon: <Mail className="text-red-600" size={24} />,
       title: t.email,
-      content: "info@asiangrocery.pl",
+      content: "lojanesia.official@yahoo.com",
       description: t.emailDesc,
     },
     {
@@ -432,8 +432,17 @@ export default function AsianGroceryContactPage() {
     {
       icon: <Instagram className="text-white" size={20} />,
       name: "Instagram",
-      handle: "@asiangrocerypoland",
-      url: "https://instagram.com/asiangrocerypoland",
+      handle: "@lojanesia.europe",
+      url: "https://www.instagram.com/lojanesia.europe?igsh=MXdncnRreGxrYXZ0Zw==",
+      color: "from-red-600 to-red-500",
+      hoverShadow: "hover:shadow-red-500/30",
+      followers: "12.5K",
+    },
+    {
+      icon: <Instagram className="text-white" size={20} />,
+      name: "Instagram",
+      handle: "@dapuromahmlawa",
+      url: "https://www.instagram.com/dapuromahmlawa?igsh=OGJoZWx0Nzc3NHhs",
       color: "from-red-600 to-red-500",
       hoverShadow: "hover:shadow-red-500/30",
       followers: "12.5K",
@@ -441,8 +450,17 @@ export default function AsianGroceryContactPage() {
     {
       icon: <Facebook className="text-white" size={20} />,
       name: "Facebook",
-      handle: "Asian Grocery Poland",
-      url: "https://facebook.com/asiangrocerypoland",
+      handle: "Lojanesia Poland",
+      url: "https://www.facebook.com/share/19s2ThHHnS/",
+      color: "from-gray-800 to-gray-900",
+      hoverShadow: "hover:shadow-gray-400/50",
+      followers: "8.2K",
+    },
+    {
+      icon: <Facebook className="text-white" size={20} />,
+      name: "Facebook",
+      handle: "Dapur Omah Mława",
+      url: "https://www.facebook.com/share/1EhKYBYhwk/",
       color: "from-gray-800 to-gray-900",
       hoverShadow: "hover:shadow-gray-400/50",
       followers: "8.2K",
@@ -735,9 +753,6 @@ export default function AsianGroceryContactPage() {
                           <h4 className="font-bold">{social.name}</h4>
                           <p className="text-sm opacity-90">{social.handle}</p>
                         </div>
-                      </div>
-                      <div className="text-sm opacity-90">
-                        {social.followers} {t.followers}
                       </div>
                     </a>
                   ))}
