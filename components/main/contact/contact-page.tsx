@@ -254,7 +254,7 @@ const translations: Translations = {
       "✨ Konsultasi gratis • 🥢 Info produk Asia • 🚚 Panduan pemesanan",
     contactInfo: "Informasi Kontak",
     phone: "Telepon",
-    phoneDesc: "Toko (Senin-Sabtu)",
+    phoneDesc: "Toko (Senin-Minggu)",
     email: "Email",
     emailDesc: "Respon dalam 2-4 jam kerja",
     address: "Alamat",
@@ -411,7 +411,7 @@ export default function AsianGroceryContactPage() {
     {
       icon: <Phone className="text-red-600" size={24} />,
       title: t.phone,
-      content: "+‪+48 732 962 624‬",
+      content: "+48 732 962 624",
       description: t.phoneDesc,
     },
     {
