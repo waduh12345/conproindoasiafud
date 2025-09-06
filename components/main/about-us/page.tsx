@@ -397,7 +397,7 @@ export default function AboutUsPage() {
                 
                 <div className="order-1 lg:order-2 relative">
                   <img 
-                    src="/images/about-us/about-us.jpeg"
+                    src="/images/about-us/tentang-kami.webp"
                     alt="Asian Grocery Store"
                     className="w-full md:h-140 object-cover rounded-2xl shadow-2xl"
                   />

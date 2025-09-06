@@ -11,8 +11,8 @@ const WhatsAppFloat = () => {
   
   const handleWhatsAppClick = () => {
     // Ganti nomor dengan nomor WhatsApp yang sesuai
-    const phoneNumber = "6285294496194"; // Format: 62 untuk Indonesia
-    const message = "Hello! I'm interested in your pet transport services.";
+    const phoneNumber = "48732962624"; // Format: 62 untuk Indonesia
+    const message = "Hello Indo Asia Food! I would like to connect with you.";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
   };
